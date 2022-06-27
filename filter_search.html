@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/fav-icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Playfair+Display&family=Ubuntu&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <!-- animate-css -->
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- WoW-js -->
+    <!-- <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script> -->
+    <title>CareerVision</title>
+</head>
+
+<body>
+    <!-- <header class="header"> -->
+    <header class="header header-white">
+        <div class="header__container container">
+            <div class="header__block">
+                <div class="header__logo">
+                    <a href="" class="header-logo__link">
+                        <img src="img/header-icon.svg" alt="header-icon">
+                    </a>
+                </div>
+                <div class="header-block__fixed">
+                    <div class="header-block__body">
+                        <div class="header-block__close">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.25 1.25L18.75 18.75M1.25003 18.75L10 10L18.75 1.25" stroke="#32374A"
+                                    stroke-width="1.875" stroke-linecap="round"></path>
+                            </svg>
+                        </div>
+                        <div class="header__left header-left">
+                            <div class="lang_block">
+                                <a class="lang_choice" href="javascript:;">Рус</a>
+                                <div class="other_lang" style="display: none;">
+                                    <a class="lang active" href="/">Eng</a>
+                                    <a class="lang" href="/kz">Каз</a>
+                                </div>
+                            </div>
+                            <div class="header-left__network">
+                                <a href="" class="header-left__icon"><img src="img/whatsapp-icon.svg" alt=""></a>
+                                <a href="" class="header-left__icon"><img src="img/facebook-icon.svg" alt=""></a>
+                                <a href="" class="header-left__icon"><img src="img/instagram-icon.svg" alt=""></a>
+                            </div>
+                            <div class="header__tel">
+                                <div class="header-tel__link">+7 705 726 66 66</div>
+                            </div>
+                        </div>
+                        <nav class="header__nav header-nav">
+                            <ul class="header__menu menu">
+                                <li class="menu__list"><a href="" class="menu__link">Главная</a></li>
+                                <li class="menu__list"><a href="" class="menu__link">Поиск работы</a></li>
+                                <li class="menu__list"><a href="" class="menu__link">Новости</a></li>
+                                <li class="menu__list list-icon">
+                                    <a href="javascript:;" class="menu__link">Услуги</a>
+                                    <ul class="menu-two">
+                                        <li class="menu-two__list"><a href="" class="menu-two__link">name</a></li>
+                                        <li class="menu-two__list"><a href="" class="menu-two__link">name</a></li>
+                                        <li class="menu-two__list"><a href="" class="menu-two__link">name</a></li>
+                                        <li class="menu-two__list"><a href="" class="menu-two__link">name</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header__right header-right">
+                            <a href="" class="header-right__signin">Войти</a>
+                            <a href="" class="header-right__signup">Зарегитрироваться</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__burger menu-burger">
+                    <div class="menu-burger__block">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 	</header> -->
+
+    <section id="first-section">
+        <div class="container">
+            <div class="title">
+                Поиск для вакансий
+            </div>
+            <div class="search-content">
+                <div class="search-content__block">
+                    <div class="search__left__block">
+                        <div class="bold_text">
+                            Ключевые слова
+                        </div>
+                    </div>
+                    <div class="search__right__block">
+                        <input type="text" id="fname" class="region_input">
+                        <a class="under-text">Например, Учитель Химии</a>
+                    </div>
+                </div>
+                <div class="search-content__block">
+                    <div class="search__left__block">
+                        <div class="bold_text">
+                            Ключевые слова
+                        </div>
+                    </div>
+                    <div class="search__right__block">
+                        <div class="region_blocks">
+                            <input type="text" id="fname" class="region_input">
+                            <a class="input-icon" data-fancybox data-src="#region-popup">
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+                        <div class="search-regions">
+                        </div>
+                    </div>
+                </div>
+                <div class="search-content__block">
+                    <div class="search__left__block">
+                        <div class="bold_text">
+                            Позиция
+                        </div>
+                    </div>
+                    <div class="position__right__block">
+                        <div class="position__block">
+                            <p class="gray_text">административный состав:</p>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">главный исполнительный
+                                директор
+                                (CEO)</label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">главный исполнительный
+                                директор
+                                (CEO)</label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">главный исполнительный
+                                директор
+                                (CEO)</label>
+                            <a href="javascript:;" class="blue_link">Показать все</a>
+                            <div class="position__input__other position__block">
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">главный исполнительный
+                                    директор
+                                    (CEO)</label>
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">главный исполнительный
+                                    директор
+                                    (CEO)</label>
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">главный исполнительный
+                                    директор
+                                    (CEO)</label>
+                            </div>
+                        </div>
+                        <div class="position__block">
+                            <p class="gray_text">административный состав:</p>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">учитель</label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">методист</label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">лектор</label>
+                            <a href="javascript:;" class="blue_link">Показать все</a>
+                            <div class="position__input__other position__block">
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">учитель</label>
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">методист</label>
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">лектор</label>
+                            </div>
+                        </div>
+                        <div class="position__block">
+                            <p class="gray_text">административный состав:</p>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">учитель</label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">методист</label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">лектор</label>
+                            <a href="javascript:;" class="blue_link">Показать все</a>
+                            <div class="position__input__other position__block">
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">учитель</label>
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">методист</label>
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">лектор</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-content__block">
+                    <div class="search__left__block">
+                        <div class="bold_text">
+                            Вид договора
+                        </div>
+                    </div>
+                    <div class="search__right__block">
+                        <div class="position_block__label position__input custom-radio">
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">полный рабочий день</label>
+                        </div>
+                        <div class="position_block__label position__input custom-radio">
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">частичная занятость</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-content__block">
+                    <div class="search__left__block">
+                        <div class="bold_text">
+                            Форма собственности
+                        </div>
+                    </div>
+                    <div class="search__right__block">
+                        <div class="position_block__label position__input custom-radio">
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">государственная</label>
+                        </div>
+                        <div class="position_block__label position__input custom-radio">
+                            <label class="custom-radio">
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">частаная</label>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-content__block">
+                    <div class="search__left__block">
+                        <div class="bold_text">
+                            Позиция
+                        </div>
+                    </div>
+                    <div class="position__right__block">
+                        <div class="position__block">
+                            <p class="gray_text">административный состав:</p>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">главный исполнительный
+                                директор
+                                (CEO)</label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">главный исполнительный
+                                директор
+                                (CEO)</label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">главный исполнительный
+                                директор
+                                (CEO)</label>
+                            <a href="javascript:;" class="blue_link">Показать все</a>
+                            <div class="position__input__other position__block">
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">главный исполнительный
+                                    директор
+                                    (CEO)</label>
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">главный исполнительный
+                                    директор
+                                    (CEO)</label>
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">главный исполнительный
+                                    директор
+                                    (CEO)</label>
+                            </div>
+                        </div>
+                        <div class="position__block">
+                            <p class="gray_text">административный состав:</p>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">учитель</label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">методист</label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">лектор</label>
+                            <a href="javascript:;" class="blue_link">Показать все</a>
+                            <div class="position__input__other position__block">
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">учитель</label>
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">методист</label>
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">лектор</label>
+                            </div>
+                        </div>
+                        <div class="position__block">
+                            <p class="gray_text">административный состав:</p>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">учитель</label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">методист</label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">лектор</label>
+                            <a href="javascript:;" class="blue_link">Показать все</a>
+                            <div class="position__input__other position__block">
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">учитель</label>
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">методист</label>
+                                <label class="position_block__label position__input">
+                                    <input type="checkbox" class="region-popup__checkbox">лектор</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-content__block">
+                    <div class="search__left__block">
+                        <div class="bold_text">
+                            Предмет
+                        </div>
+                    </div>
+                    <div class="search__right__block">
+                        <div class="subject__block">
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">учитель
+                            </label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">учитель
+                            </label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">учитель
+                            </label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">учитель
+                            </label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">учитель
+                            </label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">учитель
+                            </label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">учитель
+                            </label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">учитель
+                            </label>
+                            
+                            <a href="javascript:;" class="blue_link">Показать все</a>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">учитель
+                            </label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">учитель
+                            </label>
+                            <label class="position_block__label position__input">
+                                <input type="checkbox" class="region-popup__checkbox">учитель
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-content__block">
+                    <div class="search__left__block">
+                        <div class="bold_text">
+                            Язык обучения
+                        </div>
+                    </div>
+                    <div class="search__right__block">
+                        <div class="position_block__label position__input custom-radio"><label
+                                class="position_block__label position__input"><input type="checkbox"
+                                    class="region-popup__checkbox">казахский</label></div>
+                        <div class="position_block__label position__input custom-radio"><label
+                                class="position_block__label position__input"><input type="checkbox"
+                                    class="region-popup__checkbox">русский</label></div>
+                        <div class="position_block__label position__input custom-radio"><label
+                                class="position_block__label position__input"><input type="checkbox"
+                                    class="region-popup__checkbox">английский</label></div>
+                        <div class="position_block__label position__input custom-radio"><label
+                                class="position_block__label position__input"><input type="checkbox"
+                                    class="region-popup__checkbox">смешанный</label></div>
+                    </div>
+                </div>
+                <div class="search__btn">
+                    <a data-fancybox data-src="#popup">Найти</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 	</section> -->
+
+    <!-- <footer class="footer"> -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__top">
+                <div class="footer__logo footer-logo">
+                    <a href="" class="footer-logo__link">
+                        <img src="img/footer-logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="footer__block">
+                    <div class="footer__main">
+                        <ul class="footer__menu footer-menu">
+                            <li><a href="" class="footer-menu__link">Главная</a></li>
+                            <li><a href="" class="footer-menu__link">Поиск работы</a></li>
+                            <li><a href="" class="footer-menu__link">Новости</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__main">
+                        <ul class="footer__menu footer-menu">
+                            <li><a href="" class="footer-menu__link">Услуги</a></li>
+                            <li><a href="" class="footer-menu__link">Курсы</a></li>
+                            <li><a href="" class="footer-menu__link">Проф ориентация для детей</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__network">
+                        <a href="" class="footer__social map">г. Нур-Султан, Кенесары 43, офис 12</a>
+                        <a href="" class="footer__social email">сareervision@gmail.com</a>
+                        <a href="" class="footer__social tel">+ 7 705 455 55 55</a>
+                    </div>
+                    <div class="footer__social-network social-network">
+                        <a href="" class="social-network__icon"><img src="img/whatsapp-icon.svg" alt=""></a>
+                        <a href="" class="social-network__icon"><img src="img/facebook-icon.svg" alt=""></a>
+                        <a href="" class="social-network__icon"><img src="img/instagram-icon.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__confy">
+                    Career Vision 2022. Все права защищены
+                </div>
+                <div class="footer__develop">
+                    <span>Разработка сайта</span>
+                    <a href="https://astanacreative.kz/">AstanaCreative</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- </footer> -->
+
+    <!-- <div class="popup"> -->
+    <div id="popup" class="popup" style="display: none;">
+        <div class="request-fixed">
+            <div class="request-block">
+                <div class="request-item">
+                    <div class="request-title">Войдите или зарегистрируйтесь</div>
+                    <div class="request__subtitle">что бы откликнуться или сохранить вакансию</div>
+                    <div class="reques-form">
+                        <form method="post" accept-charset="utf-8" class="form" action="/requests/send">
+                            <input type="text" placeholder="Введите ваш  email">
+                            <button class="request-button__entrance">Вход</button>
+                            <button class="request-button__signup">Регистрация</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <!--  -->
+    <!-- REGION POPUP -->
+    <div class="popup" id="region-popup" style="display: none;">
+        <div class="request-fixed">
+            <div class="request-block region-blocks">
+                <div class="region_popup-input">
+                    <input type="text" id="fname" class="region_input" placeholder="Выберите регион и город">
+                    <div class="input-icon">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="region-popup__content">
+                    <div class="region-popup__block">
+                        <input type="checkbox" id="1" class="region-popup__checkbox"><label class="region-popup__label"
+                            for="1">Город Нур-Султан</label>
+                    </div>
+                    <div class="region-popup__block">
+                        <input type="checkbox" id="2" class="region-popup__checkbox"><label class="region-popup__label"
+                            for="2">Город Алматы</label>
+                    </div>
+                    <div class="region-popup__block">
+                        <input type="checkbox" id="3" class="region-popup__checkbox"><label class="region-popup__label"
+                            for="3">Город Шымкент</label>
+                    </div>
+                    <div class="region-popup__block region-popup__dd__block">
+                        <div class="rp__checkbox__block">
+                            <span class="checkbox__arrow"></span><input type="checkbox" id="4"
+                                class="region-popup__checkbox"><label class="region-popup__label" for="4">Акмолинская
+                                область</label>
+                        </div>
+                        <div class="rp__other__checkbox" style="display: none;">
+                            <div class="other__checkbox__block"><input type="checkbox" class="region-popup__checkbox"
+                                    id="5"><label class="region-popup__label" for="5">Акколь</label></div>
+                            <div class="other__checkbox__block"><input type="checkbox" class="region-popup__checkbox"
+                                    id="6"><label class="region-popup__label" for="6">Атбасар</label></div>
+                            <div class="other__checkbox__block"><input type="checkbox" class="region-popup__checkbox"
+                                    id="7"><label class="region-popup__label" for="7">Державинск</label></div>
+                        </div>
+                    </div>
+                    <div class="region-popup__block region-popup__dd__block">
+                        <div class="rp__checkbox__block">
+                            <span class="checkbox__arrow"></span><input type="checkbox" id="8"
+                                class="region-popup__checkbox"><label class="region-popup__label" for="8">Акмолинская
+                                область</label>
+                        </div>
+                        <div class="rp__other__checkbox" style="display: none;">
+                            <div class="other__checkbox__block"><input type="checkbox" class="region-popup__checkbox"
+                                    id="9"><label class="region-popup__label" for="9">Акколь</label></div>
+                            <div class="other__checkbox__block"><input type="checkbox" class="region-popup__checkbox"
+                                    id="10"><label class="region-popup__label" for="10">Атбасар</label></div>
+                            <div class="other__checkbox__block"><input type="checkbox" class="region-popup__checkbox"
+                                    id="11"><label class="region-popup__label" for="11">Державинск</label></div>
+                        </div>
+                    </div>
+                    <div class="region-popup__block region-popup__dd__block">
+                        <div class="rp__checkbox__block">
+                            <span class="checkbox__arrow"></span><input type="checkbox" id="12"
+                                class="region-popup__checkbox"><label class="region-popup__label" for="12">Акмолинская
+                                область</label>
+                        </div>
+                        <div class="rp__other__checkbox" style="display: none;">
+                            <div class="other__checkbox__block"><input type="checkbox" class="region-popup__checkbox"
+                                    id="13"><label class="region-popup__label" for="13">Акколь</label></div>
+                            <div class="other__checkbox__block"><input type="checkbox" class="region-popup__checkbox"
+                                    id="14"><label class="region-popup__label" for="14">Атбасар</label></div>
+                            <div class="other__checkbox__block"><input type="checkbox" class="region-popup__checkbox"
+                                    id="15"><label class="region-popup__label" for="15">Державинск</label></div>
+                        </div>
+                    </div>
+                    <div class="region-popup__block region-popup__dd__block">
+                        <div class="rp__checkbox__block">
+                            <span class="checkbox__arrow"></span><input type="checkbox" id="16"
+                                class="region-popup__checkbox"><label class="region-popup__label" for="17">Акмолинская
+                                область</label>
+                        </div>
+                        <div class="rp__other__checkbox" style="display: none;">
+                            <div class="other__checkbox__block"><input type="checkbox" class="region-popup__checkbox"
+                                    id="18"><label class="region-popup__label" for="18">Акколь</label></div>
+                            <div class="other__checkbox__block"><input type="checkbox" class="region-popup__checkbox"
+                                    id="19"><label class="region-popup__label" for="19">Атбасар</label></div>
+                            <div class="other__checkbox__block"><input type="checkbox" class="region-popup__checkbox"
+                                    id="20"><label class="region-popup__label" for="20">Державинск</label></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup_bottom_btns">
+                    <a href="#" class="popup_bottom_btn">Отменить</a>
+                    <a href="#" class="popup_bottom_btn" data-fancybox-close="" id="region_choice">Выбрать</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <!-- <script src="js/popper.min.js"></script> -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
