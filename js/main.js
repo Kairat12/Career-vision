@@ -445,6 +445,22 @@ if (showAllRadio){
 		})
 	}
 
+let vacancyNotice = document.querySelectorAll('.vacancy__notice__block');
+if (vacancyNotice){
+	vacancyNotice.forEach(elem =>{
+		elem.addEventListener("click", function(e){
+			let target = e.target;
+			if(target.classList.contains('notice__delete')){
+				let check = confirm("Вы действительно хотите удалить?");
+				if (check){
+					target.closest('.vacancy__notice__block').remove();
+				}
+				
+			}
+		})
+
+	})
+}
 
 
 
