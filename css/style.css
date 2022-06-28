@@ -1495,13 +1495,11 @@ input.error{
     margin-right: 20px;
 }
 .news-row {
-    display: none;
+    display: flex;
     margin: 0 -10px;
     flex-wrap: wrap;
 }
-.news-row.active {
-    display: flex;
-}
+
 .news-row__column {
     flex: 0 1 25%;
     padding: 0 10px;
@@ -3680,6 +3678,19 @@ input::-webkit-inner-spin-button {
 }
 .news-view__data{
     color: #93ACC2;
+    margin-bottom: 20px;
+}
+.news-view__image{
+    height: 429px;
+}
+.link-flex{
+    display: flex;
+    align-items: flex-end;
+}
+.resume__bottom__blocks .auth__btn{
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
 }
 
 /* Applicant - page */
@@ -5445,6 +5456,9 @@ input::-webkit-inner-spin-button {
     }
     .register-forms .courses-bottom__column{
         flex: 0 1 100%;
+    }
+    .resume__bottom__block{
+        width: 100%;
     }
 
 }
