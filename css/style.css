@@ -1952,8 +1952,11 @@ input.error{
     background: #FFF;
 }
 .pd-all {
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
+}
+.noUi-connects{
+    cursor: pointer;
 }
 .vacancy-filter__one {
     display: flex;
@@ -2008,34 +2011,34 @@ input.error{
 
 
 .noUi-connect {
-    background: #2046B3 !important;
+    background: #2046B3;
 }
 .noUi-pips-horizontal {
     display: none;
 }
 .noUi-horizontal {
-    height: 4px !important;
-    border: none !important;
+    height: 4px ;
+    border: none ;
 }
 .noUi-touch-area {
     background-color: #1785E5;
     border-radius: 50%;
 }
 .noUi-handle:after, .noUi-handle:before {
-    display: none !important;
+    display: none ;
 }
 .noUi-horizontal .noUi-handle {
-    width: 15px !important;
-    height: 15px !important;
+    width: 15px ;
+    height: 15px ;
     background-color: #1785E5;
-    right: -10px !important;
+    right: -10px ;
     border-radius: 50%;
-    border: none !important;
+    border: none ;
 }
 .noUi-connects {
-    border: none !important;
+    border: none ;
     background-color: #D9D9D9;
-    border: none !important;
+    border: none ;
 }
 
 
@@ -2877,6 +2880,7 @@ main.regestr-main::before{
 .input-img{
     width: 100%;
     height: 100%;
+    max-height: 300px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -3541,15 +3545,20 @@ input::-webkit-inner-spin-button {
     column-gap: 30px;
     margin-top: 20px;
 }
-.like-btn img{
+.like-btn svg{
     width: 20px;
     height: 20px;
-    object-fit: contain;
 }
+.like-btn svg path{
+    fill: #6F727C;
+    transition: 0.2s linear;
+}
+.like-btn:hover svg path, .like-btn.active svg path{
+    fill: rgb(253, 138, 37);
+}
+
+
 .save-vacancy__content{
-    display: none;
-}
-.save-vacancy__content.active{
     display: flex;
 }
 .sended__vacancy .blue-btn{
@@ -3692,7 +3701,183 @@ input::-webkit-inner-spin-button {
     margin-top: 20px;
     width: 100%;
 }
+.fqa__blocks{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+.fqa__block{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 100%;
+}
+.fqa__top__text{
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 23px -4px rgba(147, 172, 194, 0.12);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+    width: 100%;
+}
+.fqa__top__text img{
+    width: 15px;
+    height: 9px;
+    object-fit: contain;
+    transform: rotate(180deg);
+    pointer-events: none;
+    transition: 0.3s linear;
+}
+.fqa__top__text p{
+    pointer-events: none;
+}
+.fqa__bottom__text{
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+.fqa__top__text.active img{
+    transform: rotate(0);
+}
+.news-row__text .blue_link{
+    margin-top: 15px;
+    display: block;
+}
+.register-forms .search-block{
+    width: 100%;
+    background: #fff;
+}
+.register-forms .search-block input{
+    background: #fff;
+}
+.blue__block{
+    padding: 20px;
+    background: #1785E5;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 23px rgba(147, 172, 194, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.blue__block__big__text{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1;
+    color: #FFFFFF;
+}
+.vip_vacancy__resume__block .blue-btn{
+    background: #FD8A25;
+}
+.vip_vacancy__resume__block .vacancy-salary{
+    color: #FD8A25;
+}
+.filter__vacancy__block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.filter__vacancy__top__block{
+    background: #fff;
+    box-shadow: 0px 4px 23px rgba(147, 172, 194, 0.12);
+    border-radius: 10px;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    column-gap: 10%;
+}
+.filter__vacancy__text{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: #32374A;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+.filter__vacancy__text .filter__arrow{
+    width: 12px;
+    height: 7px;
+    object-fit: contain;
+    transition: 0.2s linear;
+    transform: rotate(180deg);
+}
+.filter__vacancy__text .sort__img{
+    width: 30px;
+    height: 15px;
+    object-fit: contain;
+    transition: 0.2s linear;
+}
+.filter__vacancy__block .custom-select{
+}
+.filter__vacancy__block .select-selected:after{
+    top: 7px;
+    right: 0;
+    border: none;
+    background: url(../img/arrow_fqa.svg) no-repeat;
+    width: 12px;
+    height: 7px;
+    background-size: contain;
+    transform: rotate(180deg);
+    transition: 0.2s linear;
+}
+.filter__vacancy__block .select-selected.select-arrow-active::after{
+    transform: rotate(0);
+}
+.filter__vacancy__block .select-selected{
+    border: none;
+    min-height: 1px;
+    padding-right: 15px;
+    font-weight: 700;
+}
+.filter__vacancy__block .select-items{
+    right: auto;
+    padding-top: 20px;
+}
+.filter__vacancy__block .select-items div{
+    white-space: nowrap;
+}
+.filter__vacancy__bottom__blocks{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 2%;
+}
+.filter__vacancy__bottom__block{
+    width: 32%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.filter__vacancy__bottom__block .position_block__label{
+    width: 100%;
+}
+.filter__vacancy__bottom__block .position__block{
+    flex: 1;
+}
+.filter__vacancy__bottom__block .position__right__block{
+    width: 100%;
+}
+.filter__vacancy__bottom__block .position__block .position_block__label{
+    display: none;
+}
+.filter__vacancy__bottom__block .position__block.active .position_block__label{
+    display: flex;
+}
 
+.filter__vacancy__bottom__block .position__block .position_block__label:nth-child(-n+3){
+    display: flex;
+}
 /* Applicant - page */
 
 @media (max-width: 1900px) {
@@ -4170,6 +4355,12 @@ input::-webkit-inner-spin-button {
     .save-vacancy__top__text h3, .save-vacancy__top__text h1, .save-vacancy__top__text h2{
         font-size: 22px;
     }
+    .blue__block,.filter__vacancy__text{
+        font-size: 16px;
+    }
+    .blue__block__big__text{
+        font-size: 24px;
+    }
 }
 @media (max-width:1600px){
     .container {
@@ -4245,13 +4436,16 @@ input::-webkit-inner-spin-button {
     .vacancy__notice__top__block{
         padding: 15px;
     }
-    .vacancy__notice__top__block{
+    .vacancy__notice__top__block,.filter__vacancy__text{
         font-size: 14px;
     }
     .save-vacancy__block{
         padding: 15px;
     }
-
+    .save-vacancy__top__img{
+        width: 120px;
+        height: 120px;
+    }
 
 }
 @media (max-width: 1399.98px) {
@@ -4726,6 +4920,12 @@ input::-webkit-inner-spin-button {
     .blue-btn, .save-vacancy__bottom__btns .blue-btn{
         font-size: 14px;
     }
+    .blue__block{
+        font-size: 14px;
+    }
+    .blue__block__big__text{
+        font-size: 20px;
+    }
 }
 @media (max-width: 1199.98px) {
     .container {
@@ -4879,7 +5079,8 @@ input::-webkit-inner-spin-button {
         width: 100%;
     }
     .input-img{
-        width: auto;
+        width: 300px;
+        height: 300px;
         border-radius: 50%;
         filter: brightness(0.9);
     }
@@ -4897,6 +5098,9 @@ input::-webkit-inner-spin-button {
     .save-vacancy__top__img{
         width: 120px;
         height: 120px;
+    }
+    .blue__block__big__text{
+        font-size: 18px;
     }
 }
 @media (max-width: 991.98px) {
@@ -5216,6 +5420,9 @@ input::-webkit-inner-spin-button {
     .regestr-main{
         width: calc(100% - 310px);
     }
+    .register-forms .courses-bottom__column{
+        flex: 0 1 100%
+    }
 }
 @media (max-width: 768.98px) {
     .review__column {
@@ -5430,6 +5637,7 @@ input::-webkit-inner-spin-button {
     }
     .input-img{
         border-radius: 50%;
+        height: auto;
         filter: brightness(0.9);
         border: 5px solid #FFFFFF;
     }

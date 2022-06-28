@@ -176,6 +176,11 @@ $('.courses-bottom__list').on("click", function(e) {
 	// }
 });
 
+$('.fqa__top__text').on("click", function(e) {
+	const target = e.target
+	$(target.nextElementSibling).slideToggle();
+	target.classList.toggle('active')
+})
 
 // const time = 2000;
 // const step = 1;
@@ -399,8 +404,24 @@ if (swiperTwo) {
 // 	});
 // };
 
-
-
+const imgDiv = document.querySelector('.profile-image');
+const img = document.querySelector('.input-img');
+const file = document.querySelector('#upload_img');
+if (file){
+	file.addEventListener('change', function(){
+		const choosedFile = this.files[0];
+		if (choosedFile) {
+			const reader = new FileReader();
+		   reader.addEventListener('load', function(){
+				  if(!img.classList.contains('active')) {
+					  img.classList.add('active');
+				  }
+			  img.setAttribute('src', reader.result);
+		   });
+		   reader.readAsDataURL(choosedFile);
+		}
+	  });
+}
 
 const rangeSlider = document.getElementById('range-slider');
 if (rangeSlider) {
@@ -452,7 +473,8 @@ showAll.forEach(element =>{
 		let target = e.target;
 		if (target.classList.contains("blue_link")){
 			target.classList.add("active")
-			target.nextElementSibling.classList.add("active")
+			target.nextElementSibling.classList.add("active");
+			target.parentElement.classList.add("active")
 		}
 	})
 })
