@@ -3678,6 +3678,9 @@ input::-webkit-inner-spin-button {
     column-gap: 1%;
     flex: 1;
 }
+.news-view__data{
+    color: #93ACC2;
+}
 
 /* Applicant - page */
 
