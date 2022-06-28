@@ -3663,6 +3663,21 @@ input::-webkit-inner-spin-button {
 .register-forms .courses-bottom__menu.active{
     align-items: flex-start;
 }
+.register-forms .news-row__column{
+    flex: 0 1 50%;
+}
+.register-forms .news-view__card{
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+.register-forms .news-view__left{
+    flex: 0 1 100%;
+}
+.register-forms .news-view__right{
+    display: flex;
+    column-gap: 1%;
+    flex: 1;
+}
 
 /* Applicant - page */
 
@@ -5604,6 +5619,9 @@ input::-webkit-inner-spin-button {
     }
     .save-vacancy__top__text .vacancy-salary{
         font-size: 18px;
+    }
+    .register-forms .news-row__column{
+        flex: 0 1 100%;
     }
 }
 
