@@ -1693,11 +1693,11 @@ input.error{
 }
 .courses-top__right {
     width: 45%;
-    max-height: 573px;
 }
 .courses-top__right img {
     width: 100%;
     height: 100%;
+    max-height: 573px;
 }
 .courses-bottom__block {
     display: flex;
@@ -1710,17 +1710,10 @@ input.error{
     /* padding: 30px 20px;
     height: 100%;
     display: none; */
-    height: 0;
-    padding: 0;
-    width: 100%;
-    transform: translateY(-1000px);
-    transform: scale(0);
-    visibility: hidden;
     border-radius: 0 0 10px 10px;
-    transition: all 0.6s ease 0s;
-    position: relative; 
+    padding: 15px 20px;
 }
-.courses-bottom__list.active .courses-list__menu {
+/* .courses-bottom__list.active .courses-list__menu {
     visibility: visible;
     height: auto;
     padding: 30px 20px;
@@ -1728,7 +1721,7 @@ input.error{
     transform: translateY(0);
     transform: scale(1);
     transition: all 0.6s ease 0s;
-}
+} */
 .courses-bottom__left {
     width: 290px;
 }
@@ -1751,7 +1744,6 @@ input.error{
     line-height: 100%;
     text-decoration-line: underline;
     color: #1785E5;
-    border-bottom: 1px solid #1785E5;
     transition: all 0.5s;
 }
 .courses-bottom__link {
@@ -1767,8 +1759,9 @@ input.error{
     position: relative;
     z-index: 2;
     color: #32374A;
+    border-radius: 10px;
 }
-.courses-bottom__list.active .courses-bottom__link {
+.courses-bottom__link.active {
     background: #0391D3;
     font-weight: 500;
     font-size: 18px;
@@ -3485,6 +3478,9 @@ input::-webkit-inner-spin-button {
     color: #32374A;
     margin-bottom: 5px;
 }
+.save-vacancy__top__text{
+    flex: 1 1;
+}
 .save-vacancy__top__text span{
     font-weight: 500;
     font-size: 16px;
@@ -3608,6 +3604,64 @@ input::-webkit-inner-spin-button {
 
 .vacancy__paginations li:last-child .pagination__link svg{
     transform: rotate(180deg);
+}
+.register-forms .courses-top__block{
+    flex-direction: column-reverse;
+}
+.register-forms .courses-top__right,.register-forms .courses-top__left{
+    width: 100%;
+}
+.register-forms .courses-top__right img{
+    max-height: 566px;
+}
+.register-forms .courses-top__left{
+    padding: 20px;
+}
+.register-forms .courses-top__title{
+    margin-bottom: 20px;
+}
+.register-forms .courses-bottom__block{
+    flex-direction: column;
+    row-gap: 50px;
+}
+.register-forms .courses-bottom__left{
+    width: 100%;
+}
+.register-forms .courses-bottom__menu{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+    align-items: center;
+}
+.register-forms .courses-bottom__list{
+    margin-bottom: 0;
+    width: 31%;
+}
+.register-forms .courses-bottom__link{
+    padding: 0 10px;
+}
+.register-forms .courses-bottom__column{
+    flex: 0 1 50%;
+}
+.register-forms .mg-bottom{
+    margin-bottom: 50px;
+}
+.register-forms .courses-item__link{
+    width: 100%;
+}
+.register-forms .courses-bottom__menu .courses-bottom__list {
+    display: none;
+}
+.register-forms .courses-bottom__menu .courses-bottom__list:nth-child(-n+3){
+    display: block;
+}
+
+.register-forms .courses-bottom__menu.active .courses-bottom__list{
+    display: block;
+}
+.register-forms .courses-bottom__menu.active{
+    align-items: flex-start;
 }
 
 /* Applicant - page */
@@ -3910,7 +3964,7 @@ input::-webkit-inner-spin-button {
     .courses-bottom__link {
         font-size: 16px;
     }
-    .courses-bottom__list.active .courses-bottom__link {
+    .courses-bottom__link.active {
         font-size: 16px;
     }
     .courses-bottom__link {
@@ -4054,6 +4108,39 @@ input::-webkit-inner-spin-button {
     .vn__info__block, .vacancy__notice__top__block{
         font-size: 16px;
     }
+    .pagination__link{
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+    .pagination__link svg{
+        width: 9px;
+    }
+    .sv__tab__link,.save-vacancy__top__text p, .save-vacancy__bottom__text{
+        font-size: 16px;
+    }
+    .blue-btn, .save-vacancy__bottom__btns .blue-btn{
+        font-size: 16px;
+    }
+    .save-vacancy__top__text span{
+        font-size: 14px;
+    }
+    .save-vacancy__top__text .vacancy-salary{
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .save-vacancy__top__text p{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .save-vacancy__top__img{
+        width: 140px;
+        height: 141px;
+    }
+    .save-vacancy__top__text h3, .save-vacancy__top__text h1, .save-vacancy__top__text h2{
+        font-size: 22px;
+    }
 }
 @media (max-width:1600px){
     .container {
@@ -4132,6 +4219,10 @@ input::-webkit-inner-spin-button {
     .vacancy__notice__top__block{
         font-size: 14px;
     }
+    .save-vacancy__block{
+        padding: 15px;
+    }
+
 
 }
 @media (max-width: 1399.98px) {
@@ -4411,7 +4502,7 @@ input::-webkit-inner-spin-button {
     .courses-top__text p {
         font-size: 14px;
     }
-    .courses-bottom__list.active .courses-bottom__link {
+    .courses-bottom__link.active {
         font-size: 14px;
     }
     .courses-bottom__link {
@@ -4428,9 +4519,6 @@ input::-webkit-inner-spin-button {
     }
     .courses-list__link {
         font-size: 14px;
-    }
-    .courses-bottom__list.active .courses-list__menu {
-        padding: 30px 15px;
     }
     .courses-list__menu li:not(:last-child) {
         margin-bottom: 15px;
@@ -4594,6 +4682,20 @@ input::-webkit-inner-spin-button {
     }
     .aplicant__info__photo{
         left: 33%;
+    }
+    .sv__tab__link, .save-vacancy__top__text p, .save-vacancy__bottom__text{
+        font-size: 14px;
+    }
+    .pagination__link{
+        font-size: 14px;
+        width: 35px;
+        height: 35px;
+    }
+    .pagination__link svg{
+        width: 7px;
+    }
+    .blue-btn, .save-vacancy__bottom__btns .blue-btn{
+        font-size: 14px;
     }
 }
 @media (max-width: 1199.98px) {
@@ -4762,6 +4864,10 @@ input::-webkit-inner-spin-button {
     }
     .vn__info__block{
         width: 100%;
+    }
+    .save-vacancy__top__img{
+        width: 120px;
+        height: 120px;
     }
 }
 @media (max-width: 991.98px) {
@@ -5003,10 +5109,10 @@ input::-webkit-inner-spin-button {
     }
     .courses-top__right {
         width: 100%;
-        height: 400px;
     }
     .courses-top__right img {
         object-fit: cover;
+        height: 400px;
     }
     .position__block,.position_block__label{
         width: 100%;
@@ -5316,6 +5422,12 @@ input::-webkit-inner-spin-button {
     .register-forms .search-content{
         padding-bottom: 0;
     }
+    .register-forms .courses-bottom__list{
+        width: 47%;
+    }
+    .register-forms .courses-bottom__column{
+        flex: 0 1 100%;
+    }
 
 }
 @media (max-width: 575.98px) {
@@ -5465,6 +5577,33 @@ input::-webkit-inner-spin-button {
     }
     .input-img{
         width: 100%;
+    }
+    .save-vacancy__top__img{
+        width: 70px;
+        height: 70px;
+    }
+    .save-vacancy__top__text h3, .save-vacancy__top__text h1, .save-vacancy__top__text h2{
+        font-size: 18px;
+    }
+    .blue-btn, .save-vacancy__bottom__btns .blue-btn{
+        padding: 8px 16px;
+    }
+    .save-vacancy__bottom__text{
+        margin-top: 10px;
+    }
+    .save-vacancy__tabs_btn{
+        flex-wrap: wrap;
+        row-gap: 20px;
+        padding: 10px;
+    }
+    .save-vacancy__tabs_btn li{
+        padding-right: 15px;
+    }
+    .save-vacancy__block{
+        padding: 10px;
+    }
+    .save-vacancy__top__text .vacancy-salary{
+        font-size: 18px;
     }
 }
 
@@ -5683,6 +5822,13 @@ input::-webkit-inner-spin-button {
     }
     .auth-type:first-child .auth-type-text .auth__btn{
         height: 50px;
+    }
+    .save-vacancy__top__img{
+        width: 40px;
+        height: 40px;
+    }
+    .register-forms .courses-bottom__list{
+        width: 100%;
     }
 
 }

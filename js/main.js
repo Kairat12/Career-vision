@@ -152,6 +152,30 @@ tabsBtn.forEach(function (item) {
 	});
 });
 
+// $(document).on("click", function(event){
+// 	var target = event.target;
+// 	if( !$(target).hasClass('courses-bottom__list') ){
+// 		$('.courses-list__menu').slideUp();
+// 	   $('.dropdown_menu').removeClass('active');
+// 	}
+// });
+
+$('.courses-bottom__list').on("click", function(e) {
+	const target = e.target
+	$(target.nextElementSibling).slideToggle();
+	target.classList.toggle('active')
+	// if (target.classList.contains('active')) {
+	// 	$(target.nextElementSibling).slideUp();
+	// 	target.classList.remove('active')
+	// 		// console.log(target)
+	// } else {
+		// $('.courses-list__menu').slideUp();
+		
+		// $('.courses-bottom__link').removeClass('active')
+
+	// }
+});
+
 
 // const time = 2000;
 // const step = 1;
@@ -207,7 +231,7 @@ $('#counter').each(function() {
 // 	});
 // });
 
-const tabsTwoBtn = document.querySelectorAll('.courses-bottom__list');
+const tabsTwoBtn = document.querySelectorAll('.courses-list__menu li');
 const tabTwoItems = document.querySelectorAll('.courses-bottom__row');
 tabsTwoBtn.forEach(function (item) {
 	item.addEventListener('click', function () {
@@ -433,6 +457,27 @@ showAll.forEach(element =>{
 	})
 })
 let showAllRadio = document.querySelectorAll('.subject__block');
+if (showAllRadio){
+	showAllRadio.forEach(elem =>{
+		elem.addEventListener("click", (e) => {
+				let target = e.target;
+				if (target.classList.contains("blue_link")){
+					target.classList.add("active")
+					target.parentElement.classList.add("active")
+				}
+			})
+		})
+	}
+let courseTabs = document.querySelector('.courses-bottom__menu');
+if (courseTabs){
+	courseTabs.addEventListener("click", (e) => {
+		let target = e.target;
+		if (target.classList.contains("blue_link")){
+			target.classList.add("active")
+			target.parentElement.classList.add("active")
+		}
+	})
+}
 if (showAllRadio){
 	showAllRadio.forEach(elem =>{
 		elem.addEventListener("click", (e) => {
