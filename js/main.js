@@ -61,7 +61,15 @@ $('input[type="file"]').each(function(){
 
 });
 
-
+let alertt = document.querySelector(".alert--fixed");
+let alertClose = document.querySelectorAll(".alert--close")
+for (let item of alertClose) {
+  item.addEventListener('click', function (event) {
+    alertt.classList.remove("alert--active")
+    alertt.classList.remove("alert--warning")
+    alertt.classList.remove("alert--error")
+  })
+}
 const header = document.querySelector(".header");
 
 window.addEventListener("scroll", function(e) {
