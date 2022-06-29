@@ -3819,8 +3819,7 @@ input::-webkit-inner-spin-button {
     object-fit: contain;
     transition: 0.2s linear;
 }
-.filter__vacancy__block .custom-select{
-}
+
 .filter__vacancy__block .select-selected:after{
     top: 7px;
     right: 0;
@@ -3858,12 +3857,13 @@ input::-webkit-inner-spin-button {
     width: 32%;
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
 }
 .filter__vacancy__bottom__block .position_block__label{
     width: 100%;
 }
 .filter__vacancy__bottom__block .position__block{
-    flex: 1;
+    width: 100%;
 }
 .filter__vacancy__bottom__block .position__right__block{
     width: 100%;
@@ -3878,8 +3878,73 @@ input::-webkit-inner-spin-button {
 .filter__vacancy__bottom__block .position__block .position_block__label:nth-child(-n+3){
     display: flex;
 }
+.filter__vacancy__bottom__block .region__block .position_block__label:nth-child(-n+11){
+    display: flex;
+}
+.filter__vacancy__bottom__block .language__block .position_block__label:nth-child(-n+4){
+    display: flex;
+}
+.filter__vacancy__block{
+    max-height: 300px;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    position: relative;
+}
+.filter__vacancy__block.active{
+    max-height: 3000px;
+}
+.show__all{
+    position: absolute;
+    bottom: 0px;
+    padding-bottom: 14px;
+    display: block;
+    width: 100%;
+    left: 0;
+    right: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1;
+    color: #1785E5;
+    background: linear-gradient(0deg, #F4F6F9 44.59%, rgba(244, 246, 249, 0) 111.33%);
+    text-align: center;
+    padding-top: 120px;
+}
+.filter__vacancy__block.active .show__all{
+    display: none;
+}
+.hide__all{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1;
+    width: 100%;
+    color: #1785E5;
+    text-align: center;
+    padding-top: 30px;
+}
 /* Applicant - page */
 
+
+/* scroll */
+.vip-vacancy::-webkit-scrollbar, body::-webkit-scrollbar {
+    width: 5px; /* ширина для вертикального скролла */
+    background: #CAD5DE;
+}
+body::-webkit-scrollbar {
+    width: 7px; /* ширина для вертикального скролла */
+    background: #CAD5DE;
+}
+
+/* ползунок скроллбара */
+.vip-vacancy::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+    background: #93ACC2;
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb {
+    background: #FD8A25;
+    border-radius: 5px;
+}
+
+/* scroll */
 @media (max-width: 1900px) {
     .vip-vacancy{
         width: 31%;
@@ -4361,6 +4426,12 @@ input::-webkit-inner-spin-button {
     .blue__block__big__text{
         font-size: 24px;
     }
+    .vacancy-filter__title, .show__all, .hide__all{
+        font-size: 16px;
+    }
+    .vacancy-filter__numbers, .catalog-inputs__input, .vacancy-filter__item span{
+        font-size: 16px;
+    }
 }
 @media (max-width:1600px){
     .container {
@@ -4446,6 +4517,7 @@ input::-webkit-inner-spin-button {
         width: 120px;
         height: 120px;
     }
+
 
 }
 @media (max-width: 1399.98px) {
@@ -4926,6 +4998,12 @@ input::-webkit-inner-spin-button {
     .blue__block__big__text{
         font-size: 20px;
     }
+    .vacancy-filter__title, .show__all, .hide__all{
+        font-size: 14px;
+    }
+    .vacancy-filter__numbers, .catalog-inputs__input, .vacancy-filter__item span{
+        font-size: 14px;
+    }
 }
 @media (max-width: 1199.98px) {
     .container {
@@ -5101,6 +5179,9 @@ input::-webkit-inner-spin-button {
     }
     .blue__block__big__text{
         font-size: 18px;
+    }
+    .filter__vacancy__bottom__block{
+        width: 49%;
     }
 }
 @media (max-width: 991.98px) {
@@ -5848,6 +5929,9 @@ input::-webkit-inner-spin-button {
     .register-forms .news-row__column{
         flex: 0 1 100%;
     }
+    .filter__vacancy__bottom__block{
+        width: 100%;
+    }
 }
 
 @media (max-width: 470.98px) {
@@ -5999,6 +6083,17 @@ input::-webkit-inner-spin-button {
         height: 16.8px;
         background-color: rgba(255, 255, 255, 0);
         border: none;
+    }
+    .reg-header .main-form__button, .register-forms .main-form__button{
+        background-image: url(../img/search-icon-h.svg);
+        background-repeat: no-repeat;
+    }
+    .reg-header .search-block::before,.register-forms .search-block::before{
+        display: none;
+    }
+    .search-block input{
+        padding-left: 20px;
+        font-size: 14px;
     }
     .main-form__link {
         width: 19px;

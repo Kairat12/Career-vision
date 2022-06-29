@@ -473,7 +473,7 @@ showAll.forEach(element =>{
 		let target = e.target;
 		if (target.classList.contains("blue_link")){
 			target.classList.add("active")
-			target.nextElementSibling.classList.add("active");
+			// target.nextElementSibling.classList.add("active");
 			target.parentElement.classList.add("active")
 		}
 	})
@@ -529,7 +529,17 @@ if (vacancyNotice){
 	})
 }
 
-
+const filterVacancyBlock = document.querySelector('.filter__vacancy__block');
+if (filterVacancyBlock){
+	filterVacancyBlock.addEventListener("click", function(e){
+		let target = e.target;
+		if (target.classList.contains('show__all')){
+			filterVacancyBlock.classList.add('active');
+		} else if (target.classList.contains('hide__all')){
+			filterVacancyBlock.classList.remove('active');
+		}
+	})
+}
 
 
 
