@@ -3950,6 +3950,10 @@ input::-webkit-inner-spin-button {
 }
 .vacancy__title__right__block a{
     color: #1785E5;
+    transition: 0.3s linear;
+}
+.vacancy__title__right__block a:hover{
+    color: #FD8A25;
 }
 .vacancy__title__right__block p{
     color: #32374A;
@@ -3972,12 +3976,27 @@ input::-webkit-inner-spin-button {
 .vacancy-view__blocks p{
     margin-bottom: 1.8em;
 }
+.vacancy-view__blocks p:last-child{
+    margin-bottom: 0;
+}
 .vacancy-view__blocks ul li{
     list-style: disc;
     list-style-position: inside;
 }
 .vacancy-view__blocks ul{
     margin-bottom: 1.8em;
+}
+.vacancy-view__blocks .title{
+    margin-bottom: 0;
+}
+.vacancy-view__video iframe{
+    width: 100%;
+    height: 500px;
+}
+.vacancy-view__contact__block{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 }
 
 .contact__map iframe{
@@ -4053,6 +4072,22 @@ input::-webkit-inner-spin-button {
     border-radius: 10px;
     padding: 15px;
     border: 1px solid #BBCADF;
+}
+.right-main__info__blocks{
+    background: transparent;
+    padding: 0;
+}
+.right-main__info__block{
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.right-main__info__block span{
+    color: #1785E5;
+    font-size: 16px;
 }
 
 
@@ -4681,6 +4716,15 @@ body::-webkit-scrollbar-thumb {
     .vacancy-view__blocks{
         font-size: 16px;
     }
+    .vacancy-view__blocks{
+        row-gap: 30px;
+    }
+    .vacancy-view__video iframe{
+        height: 400px;
+    }
+    .right-main__info__block span{
+        font-size: 14px;
+    }
 
 }
 @media (max-width: 1399.98px) {
@@ -5197,6 +5241,12 @@ body::-webkit-scrollbar-thumb {
     }
     .vacancy-view__blocks{
         font-size: 14px;
+    }
+    .vacancy-view__video iframe{
+        height: 350px;
+    }
+    .right-main__info__block span{
+        font-size: 12px;
     }
 }
 @media (max-width: 1199.98px) {
@@ -5945,6 +5995,9 @@ body::-webkit-scrollbar-thumb {
     }
     .vacancy__title__right__block{
         font-size: 12px;
+    }
+    .vacancy-view__video iframe{
+        height: 300px;
     }
 
 }
