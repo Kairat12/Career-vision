@@ -319,30 +319,39 @@
                                                         required="" aria-required="true">
                                                 </div>
                                                 <div class="register-input">
-                                                    <label class="auth-label" for="name">Отчество</label>
+                                                    <label class="auth-label">Страна</label>
+                                                    <div class="custom-select">
+                                                        <select>
+                                                            <option value="0">Страна</option>
+                                                            <option value="1">Kazakhstan</option>
+                                                            <option value="2">Russia</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="register-input">
+                                                    <label class="auth-label">Форма собственности</label>
+                                                    <div class="custom-select">
+                                                        <select>
+                                                            <option value="0">Форма собственности</option>
+                                                            <option value="1">Kazakhstan</option>
+                                                            <option value="2">Russia</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="register-input">
+                                                    <label class="auth-label" for="name">Ориентированность</label>
                                                     <input type="text" id="lname" class="auth-input" name="lname"
                                                         required="" aria-required="true">
                                                 </div>
                                                 <div class="register-input">
-                                                    <label class="auth-label" for="name">Пол</label>
-                                                    <label
-                                                        class="position_block__label custom-radio subject__items"><input
-                                                            type="radio" name="lang" id="" value=""
-                                                            class=""><span>Мужской</span></label>
-                                                    <label
-                                                        class="position_block__label custom-radio subject__items"><input
-                                                            type="radio" name="lang" id="" value=""
-                                                            class=""><span>Женский</span></label>
-                                                </div>
-                                                <div class="register-input">
-                                                    <label class="auth-label">Телефон</label>
-                                                    <input type="text" class="auth-input tel" name="phone" required=""
-                                                        inputmode="text">
-                                                </div>
-                                                <div class="register-input">
-                                                    <label class="auth-label">Почта</label>
-                                                    <input type="email" class="auth-input" id="email" name="email"
-                                                        required="" aria-required="true">
+                                                    <label class="auth-label">Тип организации</label>
+                                                    <div class="custom-select">
+                                                        <select>
+                                                            <option value="0">Тип организации</option>
+                                                            <option value="1">Частный</option>
+                                                            <option value="2">Частный</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -350,25 +359,11 @@
                                     <div class="register-form-content__blocks">
                                         <div class="register-form__content">
                                             <div class="register-input">
-                                                <label class="auth-label" for="name">Место проживания</label>
-                                                <input type="text" class="auth-input" name="lname" required=""
-                                                    aria-required="true">
-                                            </div>
-                                        </div>
-                                        <div class="register-form__content">
-                                            <div class="register-input">
-                                                <label class="auth-label" for="name">Дата рождения</label>
-                                                <input type="date" class="auth-input" name="lname" required=""
-                                                    aria-required="true">
-                                            </div>
-                                        </div>
-                                        <div class="register-form__content">
-                                            <div class="register-input">
-                                                <label class="auth-label">Форма собственности</label>
+                                                <label class="auth-label">Язык обучения</label>
                                                 <div class="custom-select">
                                                     <select>
-                                                        <option value="0">Гражданство</option>
-                                                        <option value="1">Kazakhstan</option>
+                                                        <option value="0">Язык обучения</option>
+                                                        <option value="1">Русский</option>
                                                         <option value="2">Russia</option>
                                                     </select>
                                                 </div>
@@ -376,38 +371,85 @@
                                         </div>
                                         <div class="register-form__content">
                                             <div class="register-input">
-                                                <label class="auth-label">Позиция</label>
+                                                <label class="auth-label">Возрастной диапозон</label>
                                                 <div class="custom-select">
                                                     <select>
-                                                        <option value="0">Учитель</option>
-                                                        <option value="1">Учитель</option>
-                                                        <option value="2">Учитель</option>
+                                                        <option value="0">Возрастной диапозон</option>
+                                                        <option value="1">7- 14 лет</option>
+                                                        <option value="2">7- 14 лет</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="register-form__content">
                                             <div class="register-input">
-                                                <label class="auth-label">Предмет</label>
+                                                <label class="auth-label">Направление</label>
                                                 <div class="custom-select">
                                                     <select>
-                                                        <option value="0">Алгебра</option>
-                                                        <option value="1">Алгебра</option>
-                                                        <option value="2">Алгебра</option>
+                                                        <option value="0">Направление</option>
+                                                        <option value="1">Направление</option>
+                                                        <option value="2">Направление</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="register-form__content">
                                             <div class="register-input">
-                                                <label class="auth-label">Статус</label>
-                                                <div class="custom-select">
-                                                    <select>
-                                                        <option value="0">Статус</option>
-                                                        <option value="1">В активном поиске работы</option>
-                                                        <option value="2">В активном поиске работы</option>
-                                                    </select>
-                                                </div>
+                                                <label class="auth-label" for="name">ФИО рукаводителя</label>
+                                                <input type="text" class="auth-input" name="lname" required=""
+                                                    aria-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="register-form__content">
+                                            <div class="register-input">
+                                                <label class="auth-label" for="name">Рабочий номер рукаводителя</label>
+                                                <input type="text" class="auth-input tel" name="phone" required="" inputmode="text">
+                                            </div>
+                                        </div>
+                                        <div class="register-form__content">
+                                            <div class="register-input">
+                                                <label class="auth-label" for="name">Сотовый номер рукаводителя</label>
+                                                <input type="text" class="auth-input tel" name="phone" required="" inputmode="text">
+                                            </div>
+                                        </div>
+                                        <div class="register-form__content">
+                                            <div class="register-input">
+                                                <label class="auth-label" for="name">ФИО заполняющего</label>
+                                                <input type="text" class="auth-input" name="lname" required=""
+                                                    aria-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="register-form__content">
+                                            <div class="register-input">
+                                                <label class="auth-label" for="name">Рабочий номер заполняющего</label>
+                                                <input type="text" class="auth-input tel" name="phone" required="" inputmode="text">
+                                            </div>
+                                        </div>
+                                        <div class="register-form__content">
+                                            <div class="register-input">
+                                                <label class="auth-label" for="name">Сотовый номер заполняющего</label>
+                                                <input type="text" class="auth-input tel" name="phone" required="" inputmode="text">
+                                            </div>
+                                        </div>
+                                        <div class="register-form__content">
+                                            <div class="register-input">
+                                                <label class="auth-label" for="name">Адрес</label>
+                                                <input type="text" class="auth-input" name="lname" required=""
+                                                    aria-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="register-form__content">
+                                            <div class="register-input">
+                                                <label class="auth-label" for="name">Почта</label>
+                                                <input type="email" class="auth-input" name="lname" required=""
+                                                    aria-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="register-form__content">
+                                            <div class="register-input">
+                                                <label class="auth-label" for="name">Сайт</label>
+                                                <input type="text" class="auth-input" name="lname" required=""
+                                                    aria-required="true">
                                             </div>
                                         </div>
                                     </div>
