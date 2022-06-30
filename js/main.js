@@ -214,7 +214,7 @@ $('.fqa__top__text').on("click", function(e) {
 var time = 1;
 
 $('#counter').each(function() {
-    $('div').each(function () {
+    $('.main-block__counter').each(function () {
         let i = 1;
         let num = $(this).data('number');
         let step = Math.round(1000 * (time / num));
@@ -244,25 +244,25 @@ $('#counter').each(function() {
 // 	});
 // });
 
-// const tabsTwoBtn = document.querySelectorAll('.courses-list__menu li');
-// const tabTwoItems = document.querySelectorAll('.courses-bottom__row');
-// tabsTwoBtn.forEach(function (item) {
-// 	item.addEventListener('click', function () {
-// 		let currentBtn = item;
-// 		let tabId = currentBtn.getAttribute('data-courses');
-// 		let currentTab = document.querySelector(tabId);
-// 		if (!currentBtn.classList.contains('active')) {
-// 			tabTwoItems.forEach(function (item) {
-// 				item.classList.remove('active');
-// 			});
-// 			tabsTwoBtn.forEach(function (item) {
-// 				item.classList.remove('active');
-// 			});
-// 			currentBtn.classList.add('active');
-// 			currentTab.classList.add('active');
-// 		}
-// 	});
-// });
+const tabsTwoBtn = document.querySelectorAll('.courses-list__menu li');
+const tabTwoItems = document.querySelectorAll('.courses-bottom__row');
+tabsTwoBtn.forEach(function (item) {
+	item.addEventListener('click', function () {
+		let currentBtn = item;
+		let tabId = currentBtn.getAttribute('data-courses');
+		let currentTab = document.querySelector(tabId);
+		if (!currentBtn.classList.contains('active')) {
+			tabTwoItems.forEach(function (item) {
+				item.classList.remove('active');
+			});
+			tabsTwoBtn.forEach(function (item) {
+				item.classList.remove('active');
+			});
+			currentBtn.classList.add('active');
+			currentTab.classList.add('active');
+		}
+	});
+});
 
 let swiperOne = document.querySelector('.review__block');
 
@@ -696,6 +696,9 @@ if(countryChoice){
 	})
 }
 
+
+
+
 const cityChoice = document.getElementById('city-popup-btn');
 if(cityChoice){
 	cityChoice.addEventListener("click", function(){
@@ -802,6 +805,10 @@ for (i = 0; i < l; i++) {
   a = document.createElement("DIV");
   a.setAttribute("class", "select-selected");
   a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  if(selElmnt.options[selElmnt.selectedIndex].hasAttribute('data-formsob')){
+	let atreb = selElmnt.options[selElmnt.selectedIndex].getAttribute('data-formsob');
+	// $(a).attr("data-formsob", selElmnt.options[selElmnt.selectedIndex].dataset.formsob)
+  }
   x[i].appendChild(a);
   /*for each element, create a new DIV that will contain the option list:*/
   b = document.createElement("DIV");
@@ -823,6 +830,7 @@ for (i = 0; i < l; i++) {
             s.selectedIndex = i;
             h.innerHTML = this.innerHTML;
             y = this.parentNode.getElementsByClassName("same-as-selected");
+			
             yl = y.length;
             for (k = 0; k < yl; k++) {
               y[k].removeAttribute("class");
@@ -899,6 +907,16 @@ document.addEventListener("click", closeAllSelect);
 // 	})
 //   });
   
+// const popupOrg = document.getElementById('popup-organiztaion');
+
+// if (popupOrg){
+// 	popupOrg.addEventListener('click', function(e){
+// 		let target = e.target;
+// 		if (target.classList.contains('form-sobs')){
+// 			let ()
+// 		}
+// 	})
+// }
 
 
 

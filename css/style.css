@@ -805,6 +805,7 @@ main::before {
     font-size: 18px;
     line-height: 144.444%;
     color: #FFF;
+    text-align: center;
 }
 /*------------------------------section.learn---------------------------*/
 .pd-page {
@@ -4231,7 +4232,51 @@ input::-webkit-inner-spin-button {
     color: #1785E5;
     font-size: 16px;
 }
-
+.courses-bottom__block .save-vacancy__tabs_btn{
+    width: 45%;
+}
+.courses-bottom__column .courses-bg__white:nth-child(n){
+    background: #fff;
+}
+.courses-item__blue__btn{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.courses-item__blue__btn .courses-item__link{
+    width: auto;
+    border: 1px solid #1785E5;
+    color: #1785E5;
+    height: 30px;
+    padding: 0px 20px;
+}
+.downald__btn{
+    width: 40px;
+    height: 40px;
+}
+.downald__btn img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.courses-bg__white .courses-item__text{
+    color: #32374A;
+}
+.courses-item_bg__link{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    column-gap: 20px;
+}
+.courses-item_bg__link .courses-item__link{
+    width: auto;
+    color: #1785E5;
+}
+.courses-item_bg__link img{
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
 
 /* Applicant - page */
 
