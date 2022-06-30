@@ -230,6 +230,17 @@ $('#counter').each(function() {
     });
 });
 
+$('.header__kebab').on("click", function() {
+		$('.settings-and-support-list').slideToggle('medium', function() {
+			if ($(this).is(':visible'))
+				$(this).css('display','flex');
+		});
+		$('body').toggleClass('active');
+})
+
+
+
+
 // $('.courses-bottom__link').each(function () {
 //     $(this).click(() => {
 //         if(!$(this).next().hasClass('active')) {
