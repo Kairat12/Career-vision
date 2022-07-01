@@ -730,8 +730,12 @@ if(typeOrgChoice){
 		let cityInputs = typeOrgContent.querySelectorAll('.region-popup__checkbox');
 		let typeorgInput = document.querySelector('.type-organization-input')
 		cityInputs.forEach((el) =>{
-			if(el.checked){
+			if(el.checked && el.id){
 				typeorgInput.setAttribute("value", el.parentElement.textContent.trim());
+				let hiddenInput = document.createElement('input');
+				hiddenInput.setAttribute("id", el.id)
+				typeorgInput.parentElement.appendChild(hiddenInput);
+				hiddenInput.style.display = "none"
 			}
 		})
 	})
