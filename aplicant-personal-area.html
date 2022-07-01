@@ -350,16 +350,22 @@
                                     <div class="register-form-content__blocks">
                                         <div class="register-form__content">
                                             <div class="register-input">
-                                                <label class="auth-label" for="name">Место проживания</label>
-                                                <input type="text" class="auth-input" name="lname" required=""
-                                                    aria-required="true">
+                                                <label class="auth-label">Страна </label>
+                                                <input type="text" class="auth-input country-input" required="">
+                                                <a class="input-icon" data-fancybox="" data-src="#country-popup">
+                                                    <span></span>
+                                                    <span></span>
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="register-form__content">
                                             <div class="register-input">
-                                                <label class="auth-label" for="name">Дата рождения</label>
-                                                <input type="date" class="auth-input" name="lname" required=""
-                                                    aria-required="true">
+                                                <label class="auth-label">Город</label>
+                                                <input type="text"  class="auth-input city-input" required>
+                                                <a class="input-icon" data-fancybox="" data-src="#city-popup">
+                                                    <span></span>
+                                                    <span></span>
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="register-form__content">
@@ -549,7 +555,141 @@
         </div>
         <!-- </div> -->
 
+	<!-- Country popup -->
+    <div class="popup" id="country-popup" style="display: none;">
+        <div class="request-fixed">
+            <div class="request-block region-blocks">
+                <div class="region_popup-input">
+                    <input type="text" id="fname" class="region_input" placeholder="Выберите регион и город">
+                    <div class="input-icon">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="region-popup__content">
+                    <div class="region-popup__block">
+                        <label class="region-popup__label" >
+                        <input type="radio" id="1" class="region-popup__checkbox" name="country" data-country = "kz">Казахстан</label>
+                    </div>
+                    <div class="region-popup__block">
+                        <label class="region-popup__label">
+                        <input type="radio" id="2" class="region-popup__checkbox" name="country" data-country = "ru">Россия</label>
+                    </div>
+                    <div class="region-popup__block">
+                        <label class="region-popup__label">
+                        <input type="radio" id="3" class="region-popup__checkbox" name="country" data-country = "kr">Кыргызстан</label>
+                    </div>
+                </div>
+                <div class="popup_bottom_btns">
+                    <a href="#" class="popup_bottom_btn">Отменить</a>
+                    <a href="#" class="popup_bottom_btn" data-fancybox-close="" id="country_choice">Выбрать</a>
+                </div>
 
+            </div>
+        </div>
+    </div>
+    <!-- Region-popup -->
+    <div class="popup" id="city-popup" style="display: none;">
+        <div class="request-fixed">
+            <div class="request-block region-blocks">
+                <div class="region_popup-input">
+                    <input type="text" id="fname" class="region_input" placeholder="Выберите регион и город">
+                    <div class="input-icon">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="region-popup__content city-popup__content">
+                    <div class="region-popup__block">
+                        <label class="region-popup__label" >
+                        <input type="radio" class="region-popup__checkbox" id="1" name="city" data-country = "kz">Казахстан</label>
+                    </div>
+                    <div class="region-popup__block">
+                        <label class="region-popup__label" >
+                        <input type="radio" class="region-popup__checkbox" id="2" name="city" data-country = "kz">Казахстан</label>
+                    </div>
+                    <div class="region-popup__block">
+                        <label class="region-popup__label">
+                        <input type="radio" class="region-popup__checkbox" id="3" name="city" data-country = "kz">Казахстан</label>
+                    </div>
+                    <div class="region-popup__block region-popup__dd__block">
+                        <div class="rp__checkbox__block">
+                            <span class="checkbox__arrow"></span>
+                            <label class="region-popup__label">
+                                <input type="radio" class="region-popup__checkbox" id="4" data-country = "kz">asdasd</label>
+                        </div>
+                        <div class="rp__other__checkbox" style="display: none;">
+                            <label class="region-popup__label">
+                                <input type="radio" class="region-popup__checkbox" id="5" name="city">Акколь</label>
+                            <label class="region-popup__label">
+                                <input type="radio" class="region-popup__checkbox" id="6" name="city">Атбасар</label>
+                            <label class="region-popup__label">
+                                <input type="radio" class="region-popup__checkbox" id="7" name="city">Державинск</label>
+                        </div>
+                    </div>
+                    <div class="region-popup__block region-popup__dd__block">
+                        <div class="rp__checkbox__block">
+                            <span class="checkbox__arrow"></span><input type="checkbox" id="8"
+                                class="region-popup__checkbox"><label class="region-popup__label"
+                                for="8">Акмолинская область</label>
+                        </div>
+                        <div class="rp__other__checkbox" style="display: none;">
+                            <div class="other__checkbox__block"><input type="checkbox"
+                                    class="region-popup__checkbox" id="9"><label class="region-popup__label"
+                                    for="9">Акколь</label></div>
+                            <div class="other__checkbox__block"><input type="checkbox"
+                                    class="region-popup__checkbox" id="10"><label class="region-popup__label"
+                                    for="10">Атбасар</label></div>
+                            <div class="other__checkbox__block"><input type="checkbox"
+                                    class="region-popup__checkbox" id="11"><label class="region-popup__label"
+                                    for="11">Державинск</label></div>
+                        </div>
+                    </div>
+                    <div class="region-popup__block region-popup__dd__block">
+                        <div class="rp__checkbox__block">
+                            <span class="checkbox__arrow"></span><input type="checkbox" id="12"
+                                class="region-popup__checkbox"><label class="region-popup__label"
+                                for="12">Акмолинская область</label>
+                        </div>
+                        <div class="rp__other__checkbox" style="display: none;">
+                            <div class="other__checkbox__block"><input type="checkbox"
+                                    class="region-popup__checkbox" id="13"><label class="region-popup__label"
+                                    for="13">Акколь</label></div>
+                            <div class="other__checkbox__block"><input type="checkbox"
+                                    class="region-popup__checkbox" id="14"><label class="region-popup__label"
+                                    for="14">Атбасар</label></div>
+                            <div class="other__checkbox__block"><input type="checkbox"
+                                    class="region-popup__checkbox" id="15"><label class="region-popup__label"
+                                    for="15">Державинск</label></div>
+                        </div>
+                    </div>
+                    <div class="region-popup__block region-popup__dd__block">
+                        <div class="rp__checkbox__block">
+                            <span class="checkbox__arrow"></span><input type="checkbox" id="16"
+                                class="region-popup__checkbox"><label class="region-popup__label"
+                                for="17">Акмолинская область</label>
+                        </div>
+                        <div class="rp__other__checkbox" style="display: none;">
+                            <div class="other__checkbox__block"><input type="checkbox"
+                                    class="region-popup__checkbox" id="18"><label class="region-popup__label"
+                                    for="18">Акколь</label></div>
+                            <div class="other__checkbox__block"><input type="checkbox"
+                                    class="region-popup__checkbox" id="19"><label class="region-popup__label"
+                                    for="19">Атбасар</label></div>
+                            <div class="other__checkbox__block"><input type="checkbox"
+                                    class="region-popup__checkbox" id="20"><label class="region-popup__label"
+                                    for="20">Державинск</label></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup_bottom_btns">
+                    <a href="#" class="popup_bottom_btn">Отменить</a>
+                    <a href="#" class="popup_bottom_btn" id="city-popup-btn" data-fancybox-close="">Выбрать</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
