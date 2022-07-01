@@ -710,6 +710,7 @@ if(countryChoice){
 
 
 
+
 const cityChoice = document.getElementById('city-popup-btn');
 if(cityChoice){
 	cityChoice.addEventListener("click", function(){
@@ -717,6 +718,20 @@ if(cityChoice){
 		cityInputs.forEach((el) =>{
 			if(el.checked){
 				cityInput.setAttribute("value", el.parentElement.textContent.trim());
+			}
+		})
+	})
+}
+
+const typeOrgChoice = document.getElementById('type-org-popup-btn');
+const typeOrgContent = document.querySelector('.type-org-popup__content')
+if(typeOrgChoice){
+	typeOrgChoice.addEventListener("click", function(){
+		let cityInputs = typeOrgContent.querySelectorAll('.region-popup__checkbox');
+		let typeorgInput = document.querySelector('.type-organization-input')
+		cityInputs.forEach((el) =>{
+			if(el.checked){
+				typeorgInput.setAttribute("value", el.parentElement.textContent.trim());
 			}
 		})
 	})

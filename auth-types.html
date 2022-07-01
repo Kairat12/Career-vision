@@ -252,14 +252,11 @@
 								</div>
 								<div class="pa-form__block">
 									<label class="auth-label">Тип организации</label>
-									<div class="custom-select">
-										<select>
-										  <option value="0">Тип организации</option>
-										  <option value="1">Частная: дошкольный мини-центр</option>
-										  <option value="2">Государственнная</option>
-										  <option value="3">Частная</option>
-										</select>
-									  </div>
+									<input type="text"  class="auth-input type-organization-input" required>
+									<a class="input-icon" data-fancybox="" data-src="#type-org-popup">
+										<span></span>
+										<span></span>
+									</a>
 								</div>
 								<div class="pa-form__block">
 									<label class="auth-label">Возрастной диапозон детей</label>
@@ -518,6 +515,60 @@
 						<div class="popup_bottom_btns">
 							<a href="#" class="popup_bottom_btn">Отменить</a>
 							<a href="#" class="popup_bottom_btn" id="city-popup-btn" data-fancybox-close="">Выбрать</a>
+						</div>
+	
+					</div>
+				</div>
+			</div>
+			<!-- Type org popup -->
+			<div class="popup" id="type-org-popup" style="display: none;">
+				<div class="request-fixed">
+					<div class="request-block region-blocks">
+						<div class="region_popup-input">
+							<input type="text" id="fname" class="region_input" placeholder="Выберите регион и город">
+							<div class="input-icon">
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+						<div class="region-popup__content type-org-popup__content">
+							<div class="region-popup__block region-popup__dd__block">
+								<div class="rp__checkbox__block">
+									<span class="checkbox__arrow"></span>
+									<label class="region-popup__label">
+										<input type="radio" class="region-popup__checkbox" >Дошкольная:</label>
+								</div>
+								<div class="rp__other__checkbox" style="display: none;">
+									<label class="region-popup__label">
+										<input type="radio" class="region-popup__checkbox"  name="city">Ясли-сад</label>
+									<label class="region-popup__label">
+										<input type="radio" class="region-popup__checkbox" name="city">Детский сад</label>
+									<label class="region-popup__label">
+										<input type="radio" class="region-popup__checkbox"  name="city">Семеный ясли-сад</label>
+									<label class="region-popup__label">
+										<input type="radio" class="region-popup__checkbox"  name="city">Дошкольный мини-центр</label>
+								</div>
+							</div>
+							<div class="region-popup__block region-popup__dd__block">
+								<div class="rp__checkbox__block">
+									<span class="checkbox__arrow"></span>
+									<label class="region-popup__label">
+										<input type="radio" class="region-popup__checkbox" >Средняя:  (по уровню образования)</label>
+								</div>
+								<div class="rp__other__checkbox" style="display: none;">
+									<label class="region-popup__label">
+										<input type="radio" class="region-popup__checkbox"  name="city">Начальная школа</label>
+									<label class="region-popup__label">
+										<input type="radio" class="region-popup__checkbox" name="city">Основная средняя школа</label>
+									<label class="region-popup__label">
+										<input type="radio" class="region-popup__checkbox"  name="city">Общеобразовательная школа</label>
+								</div>
+							</div>
+							
+						</div>
+						<div class="popup_bottom_btns">
+							<a href="#" class="popup_bottom_btn" data-fancybox-close="">Отменить</a>
+							<a href="#" class="popup_bottom_btn" id="type-org-popup-btn" data-fancybox-close="">Выбрать</a>
 						</div>
 	
 					</div>
