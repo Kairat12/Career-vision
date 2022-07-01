@@ -20,10 +20,6 @@ $(document).ready(function () {
                 email: "Email is invalid"
             }
         },
-        submitHandler: function (form) { // for demo
-            alert('valid form submitted'); // for demo
-            return false; // for demo
-        }
     });
 
 });
@@ -692,7 +688,11 @@ if(countryChoice){
 			let elemRadio = elem.querySelector(".region-popup__checkbox");
 			if (elemRadio.checked){
 				countryInput.setAttribute("value", elem.textContent.trim());
-				let cityInputs = cityContent.querySelectorAll('.region-popup__checkbox')
+				let cityInputs = cityContent.querySelectorAll('.region-popup__checkbox');
+				let hiddenInput = document.createElement('input');
+				countryInput.setAttribute("id", elem.id)
+				countryInput.parentElement.appendChild(hiddenInput);
+				hiddenInput.style.display = "none"
 				cityInputs.forEach((el) =>{
 					if (el.dataset.country == elemRadio.dataset.country ){
 						// el.parentElement.parentElement.classList.add("show");
@@ -718,6 +718,10 @@ if(cityChoice){
 		cityInputs.forEach((el) =>{
 			if(el.checked){
 				cityInput.setAttribute("value", el.parentElement.textContent.trim());
+				let hiddenInput = document.createElement('input');
+				cityInput.setAttribute("id", el.id)
+				cityInput.parentElement.appendChild(hiddenInput);
+				hiddenInput.style.display = "none"
 			}
 		})
 	})
