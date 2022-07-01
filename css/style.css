@@ -3040,6 +3040,12 @@ main.regestr-main::before{
 }
 .register-input{
     width: 48%;
+    position: relative;
+}
+.register-input .input-icon{
+    top: auto;
+    bottom: 10px;
+    right: 10px;
 }
 .register-input label{
     margin-top: 0;
