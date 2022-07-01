@@ -27,6 +27,7 @@ let tel = document.querySelectorAll(".tel");
 
 $(document).ready(function () {
 $(".tel").each(function() {$(this).inputmask("+7(999)-999-9999",{ "clearIncomplete": true })});
+$(".age").each(function() {$(this).inputmask("99-99 лет",)});
 $('.email').inputmask({
 	mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
 	greedy: false,
@@ -43,6 +44,8 @@ $('.email').inputmask({
 	}
 });
   });
+
+
 
 $(document).ready(function() {
 
