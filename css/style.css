@@ -2436,6 +2436,16 @@ input.error{
     row-gap: 20px;
     flex: 0 0 auto;
 }
+.search-content .position__block .position_block__label{
+    display: none;
+}
+.search-content .position__block.active .position_block__label{
+    display: flex;
+}
+
+.search-content .position__block .position_block__label:nth-child(-n+3){
+    display: flex;
+}
 .position__input{
     display: flex;
     column-gap: 10px;
