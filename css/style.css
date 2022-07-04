@@ -1250,6 +1250,7 @@ main::before {
 }
 .reques-form {
     width: 100%;
+    margin-top: 40px;
 }
 .form input {
     background-color: #FFFFFF;
@@ -4692,6 +4693,88 @@ input::-webkit-inner-spin-button {
 .current-vacancy__bottom__days a.blue:hover{
     color: #025cab;
 }
+.request_profile__img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.request__profile__block{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 20px;
+}
+.request__texts p{
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1;
+    color: #32374A;
+}
+.request__data{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    font-size: 18px;
+    line-height: 1px;
+}
+.request__data span{
+    font-weight: 500;
+    color: #1785E5;
+}
+.request__block{
+    display: flex;
+    column-gap: 20px;
+    padding: 20px;
+    background: #fff;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+.request__btns__block{
+    display: flex;
+    column-gap: 20px;
+    align-items: flex-start;
+    flex: 1 1 auto;
+}
+.request__new{
+    padding: 7px;
+    width: 32%;
+    background: #6F727C;;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s linear;
+}
+.request__new.active{
+    background: #1785E5;
+}
+.request__new-accept:hover,.request__new-accept.active{
+    background: #22E388;
+    cursor: pointer;
+}
+.request__new-decline:hover,.request__new-decline.active{
+    background: #FF543E;
+    cursor: pointer;
+}
+.reuqest__message__block{
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.request__content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
 /* Organization pages*/
 
 
@@ -5338,7 +5421,7 @@ body::-webkit-scrollbar-thumb {
         font-size: 12px;
     }
     .tarifs__top__block,.tarifs__block__cost{
-        font-size: 28px;
+        font-size: 24px;
     }
     .tarifs__block__count,.tarifs__bottom__block a{
         font-size: 16px;
@@ -5350,6 +5433,9 @@ body::-webkit-scrollbar-thumb {
         font-size: 16px;
     }
     .current-vacancy__bottom__days a{
+        font-size: 16px;
+    }
+    .request__texts p, .request__data, .request__new, .reuqest__message__block, .resume__bottom__input{
         font-size: 16px;
     }
 
@@ -5889,6 +5975,9 @@ body::-webkit-scrollbar-thumb {
         font-size: 14px;
     }
     .current-vacancy__bottom__days a{
+        font-size: 14px;
+    }
+    .request__texts p, .request__data, .request__new, .reuqest__message__block, .resume__bottom__input{
         font-size: 14px;
     }
 
@@ -6727,6 +6816,15 @@ body::-webkit-scrollbar-thumb {
     }
     .vacancy-view__video iframe{
         height: 300px;
+    }
+    .request__btns__block{
+        order: 2;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        justify-content: center;
+    }
+    .request__new{
+        width: 43%;
     }
 
 }
