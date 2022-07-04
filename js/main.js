@@ -237,7 +237,15 @@ $('.header__kebab').on("click", function() {
 		$('body').toggleClass('active');
 })
 
-
+let publishInputDel = document.querySelector('.publush__vacancy__input');
+if (publishInputDel){
+	publishInputDel.addEventListener("click", (e) =>{
+		let target = e.target;
+		if (target.classList.contains('publish__input__del')){
+			target.previousElementSibling.value = "";
+		}
+	})
+}
 
 
 // $('.courses-bottom__link').each(function () {
@@ -736,6 +744,23 @@ if(typeOrgChoice){
 	typeOrgChoice.addEventListener("click", function(){
 		let cityInputs = typeOrgContent.querySelectorAll('.region-popup__checkbox');
 		let typeorgInput = document.querySelector('.type-organization-input')
+		cityInputs.forEach((el) =>{
+			if(el.checked && el.id){
+				typeorgInput.setAttribute("value", el.parentElement.textContent.trim());
+				let hiddenInput = document.createElement('input');
+				hiddenInput.setAttribute("id", el.id)
+				typeorgInput.parentElement.appendChild(hiddenInput);
+				hiddenInput.style.display = "none"
+			}
+		})
+	})
+}
+const PositionChoice = document.getElementById('position-popup-btn');
+const PositionContent = document.querySelector('.position-popup__content')
+if(PositionChoice){
+	PositionChoice.addEventListener("click", function(){
+		let cityInputs = PositionContent.querySelectorAll('.region-popup__checkbox');
+		let typeorgInput = document.querySelector('.position-input')
 		cityInputs.forEach((el) =>{
 			if(el.checked && el.id){
 				typeorgInput.setAttribute("value", el.parentElement.textContent.trim());

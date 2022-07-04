@@ -2831,9 +2831,10 @@ input.error .password-control{
     height: 100%;
     transition: 0.2s linear;
 }
-.left-menu-list li:hover::before, .settings-and-support-list li:hover::before{
+.left-menu-list li:hover::before, .settings-and-support-list li:hover::before  {
     width: 7px;
 }
+
 .left-menu-list li a, .settings-and-support-list li a{
     font-weight: 500;
     font-size: 18px;
@@ -2846,14 +2847,14 @@ input.error .password-control{
     transition: 0.2s linear;
     position: relative;
 }
-.left-menu-list li a:hover, .settings-and-support-list li a:hover{
+.left-menu-list li a:hover, .settings-and-support-list li a:hover, .left-menu-list li a.active, .settings-and-support-list li a.active{
     color: #1785E5;
 }
 .left-menu-list li a svg path,.settings-and-support-list li a svg path {
     transition: 0.2s linear;
     fill: #32374A;
 }
-.left-menu-list li:hover a svg path, .settings-and-support-list li:hover a svg path{
+.left-menu-list li:hover a svg path, .settings-and-support-list li:hover a svg path,.left-menu-list li a.active svg path, .settings-and-support-list li a.active svg path {
     fill: #1785E5;
 }
 .left-menu-list li .left-menu-item::before, .settings-and-support-list li .left-menu-item::before{
@@ -4352,6 +4353,7 @@ input::-webkit-inner-spin-button {
     font-size: 14px;
     line-height: 1;
     color: #FFFFFF;
+    align-items: center;
 }
 .ai__bottom__item .filupp > input[type="file"], .ai__top__text .filupp > input[type="file"]{
     position: absolute;
@@ -4400,6 +4402,182 @@ input::-webkit-inner-spin-button {
 .ai__bottom__block iframe{
     width: 100%;
     height: 400px;
+}
+.publush__vacancy__input{
+    position: relative;
+    width: 100%;
+}
+.publush__vacancy__input .auth-label{
+    margin-top: 0;
+}
+.publish__input__del{
+    position: absolute;
+    background: #CAD5DE;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    bottom: 5px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.publish__input__del img{
+    width: 11px;
+    height: 11px;
+    pointer-events: none;
+}
+.publish__vacancy__content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    row-gap: 20px;
+    column-gap: 4%;
+}
+.publish__vacancy__content span {
+    font-size: 14px;
+}
+.publish__vacancy__content .filupp{
+    position: static;
+    height: auto;
+}
+.publish__vacancy__content .fillupp-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    left: auto;
+    display: block;
+}
+.publish__vacancy__content .ai__bottom__block{
+    width: 100%;
+}
+.publish__vacancy__btns{
+    display: flex;
+    width: 100%;
+    column-gap: 2%;
+    margin-top: 30px;
+}
+.publish__vacancy__btns input{
+    flex: 1 1 auto;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+}
+.publish__vacancy__btns input{
+    height: 50px;
+    background: #FD8A25;
+    border-radius: 10px;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+.publish__vacancy__btns input:hover{
+    background: #c96d1d;
+}
+.publish__vacancy__btns .view__show__btn{
+    background: #1785E5;
+}
+.publish__vacancy__btns .view__show__btn:hover{
+    background: #105ea2;
+}
+.publish__vacancy__btns .draft__btn{
+    background: #32374A;
+}
+.publish__vacancy__btns .draft__btn:hover{
+    background: #080808;
+}
+.tarifs__content{
+    height: auto;
+}
+.tarifs__block{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+}
+.tarifs__top__block{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: linear-gradient(264.16deg, #3CE7A5 -0.96%, #05CBEA 103.21%);
+    padding: 30px 0;
+    border-radius: 10px 10px 0px 0px;
+}
+.tarifs__block__cost{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 32px;
+    text-align: center;
+    color: #32374A;
+    padding: 30px 0px;
+}
+.tarifs__block__count{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    color: #4D5152;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid rgba(146, 157, 175, 0.35);
+    border-bottom: 1px solid rgba(146, 157, 175, 0.35);
+}
+.tarifs__block__count span{
+    color: #1785E5;
+}
+.tarifs__block__lists{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #4D5152;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding: 30px 20px;
+    border-bottom: 1px solid rgba(146, 157, 175, 0.35);
+}
+.tarifs__block__lists li{
+    list-style: disc;
+    list-style-position: inside;
+}
+.tarifs__block__lists li.disabled{
+    color: #C4C4C4;
+}
+.tarifs__block__discriptions{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #32374A;
+    padding: 30px 20px;
+    border-bottom: 1px solid rgba(146, 157, 175, 0.35);
+}
+.tarifs__block__discriptions span{
+    color: #1785E5;
+}
+.tarifs__bottom__block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    border-radius: 0px 0px 10px 10px;
+}
+.tarifs__bottom__block a{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 20px;
+    background: linear-gradient(264.16deg, #3AE6A8 -0.96%, #08CDE7 103.21%);
+    border-radius: 10px;
+    transition: 0.3s linear;
+}
+.tarifs__bottom__block a:hover{
+    background: linear-gradient(264.16deg, #2fb785 -0.96%, #069baf 103.21%);
 }
 
 /* Organization pages*/
@@ -5041,6 +5219,21 @@ body::-webkit-scrollbar-thumb {
         padding-left: 30px;
         font-size: 12px;
     }
+    .publish__vacancy__btns input{
+        font-size: 16px;
+    }
+    .publish__vacancy__content span{
+        font-size: 12px;
+    }
+    .tarifs__top__block,.tarifs__block__cost{
+        font-size: 28px;
+    }
+    .tarifs__block__count,.tarifs__bottom__block a{
+        font-size: 16px;
+    }
+    .tarifs__block__lists,.tarifs__block__discriptions{
+        font-size: 14px;
+    }
 
 }
 @media (max-width: 1399.98px) {
@@ -5066,6 +5259,9 @@ body::-webkit-scrollbar-thumb {
         height: auto;
         max-height: 350px;
         column-gap: 2%;
+    }
+    .tarifs__content{
+        max-height: none;
     }
     .vip-vacnacy-fire{
         flex: 1 1 auto;
@@ -5564,6 +5760,13 @@ body::-webkit-scrollbar-thumb {
     .right-main__info__block span{
         font-size: 12px;
     }
+    .publish__vacancy__btns input{
+        font-size: 14px;
+    }
+    .tarifs__top__block, .tarifs__block__cost,.tarifs__block__count, .tarifs__bottom__block,.tarifs__block__lists, .tarifs__block__discriptions{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 
 }
 @media (max-width: 1199.98px) {
@@ -5743,6 +5946,13 @@ body::-webkit-scrollbar-thumb {
     }
     .filter__vacancy__bottom__block{
         width: 49%;
+    }
+    .publish__vacancy__btns{
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    .publish__vacancy__btns input{
+        width: 100%;
     }
 }
 @media (max-width: 991.98px) {
@@ -6063,7 +6273,10 @@ body::-webkit-scrollbar-thumb {
         width: calc(100% - 310px);
     }
     .register-forms .courses-bottom__column{
-        flex: 0 1 100%
+        flex: 0 1 100%;
+    }
+    .tarifs__top__block, .tarifs__block__cost{
+        font-size: 20px;
     }
 }
 @media (max-width: 768.98px) {
