@@ -4775,6 +4775,9 @@ input::-webkit-inner-spin-button {
     flex-direction: column;
     row-gap: 50px;
 }
+.request__content .vacancy-notice__block{
+    font-weight: 700;
+}
 /* Organization pages*/
 
 
@@ -5304,9 +5307,12 @@ body::-webkit-scrollbar-thumb {
     .under-text, .gray_text, .position_block__label, .blue_link,.ai__middle__text{
         font-size: 14px;
     }
-    .left-menu-list li a, .settings-and-support-list li a, .vacancy-notice__block a{
+    .left-menu-list li a, .settings-and-support-list li a{
         font-size: 14px;
         padding: 15px 0;
+    }
+    .vacancy-notice__block a{
+        font-size: 14px;
     }
     .vip-vacancy__top__text, .vip-vacancy__top__text p, .vip-vacancy__wrapper p{
         font-size: 14px;
