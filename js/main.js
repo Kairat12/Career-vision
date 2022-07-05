@@ -575,7 +575,7 @@ if (filterVacancyBlock){
 // 	$( ".rp__other__checkbox" ).slideToggle( "fast" );
 //   });
 
-$('.checkbox__arrow').on("click", function(e) {
+$('.rp__checkbox__block').on("click", function(e) {
 	const target = e.target
 	  $(target).parent().next().slideToggle("fast");
 	  $(target).parent().toggleClass('active')

@@ -4851,6 +4851,27 @@ input::-webkit-inner-spin-button {
     row-gap: 50px;
 }
 
+.tarif__blocks{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2%;
+    row-gap: 20px;
+}
+.tarif__blocks .tarifs__block{
+    width: 32%;
+}
+.tarifs__block .tarifs__bottom__block a{
+    width: calc(100% - 40px);
+    text-align: center;
+}
+.tarif__blocks .tarifs__block .tarifs__block__cost{
+    border-bottom: 1px solid rgba(146, 157, 175, 0.35);;
+}
+.tarifs__block.standard .tarifs__top__block,.tarifs__block.standard .tarifs__bottom__block a{
+    background: linear-gradient(264.16deg, #8359F9 -0.96%, #22A2FB 103.21%);
+
+}
+
 
 /* Organization pages*/
 
@@ -6073,6 +6094,9 @@ body::-webkit-scrollbar-thumb {
     .region-popup__label{
         font-size: 14px;
     }
+    .tarif__blocks .tarifs__block{
+        width: 49%;
+    }
 
 }
 @media (max-width: 1199.98px) {
@@ -7113,6 +7137,9 @@ body::-webkit-scrollbar-thumb {
     }
     .data-aplicants__content{
         row-gap: 20px;
+    }
+    .tarif__blocks .tarifs__block{
+        width: 100%;
     }
 }
 
