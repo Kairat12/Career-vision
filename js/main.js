@@ -1002,6 +1002,229 @@ document.addEventListener("click", closeAllSelect);
 // 	})
 // }
 
+let dataResponse = [];
+let data = [{
+	"date": "2012-07-27",
+	"value": 13
+  }, {
+	"date": "2012-07-28",
+	"value": 11
+}];
+
+am5.ready(function() {
+// Create root element
+// https://www.amcharts.com/docs/v5/getting-started/#Root_element
+var root = am5.Root.new("chartdiv");
 
 
+// Set themes
+// https://www.amcharts.com/docs/v5/concepts/themes/
+root.setThemes([
+  am5themes_Animated.new(root)
+]);
 
+root.dateFormatter.setAll({
+  dateFormat: "yyyy",
+  dateFields: ["valueX"]
+});
+
+// Create chart
+// https://www.amcharts.com/docs/v5/charts/xy-chart/
+var chart = root.container.children.push(am5xy.XYChart.new(root, {
+  focusable: true,
+  panX: true,
+  panY: true,
+  wheelX: "panX",
+  wheelY: "zoomX",
+  pinchZoomX:true
+}));
+
+var easing = am5.ease.linear;
+
+
+// Create axes
+// https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
+  maxDeviation: 0.1,
+  groupData: false,
+  baseInterval: {
+    timeUnit: "day",
+    count: 1
+  },
+  renderer: am5xy.AxisRendererX.new(root, {
+
+  }),
+  tooltip: am5.Tooltip.new(root, {})
+}));
+
+var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+  maxDeviation: 0.2,
+  renderer: am5xy.AxisRendererY.new(root, {})
+}));
+
+
+// Add series
+// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+var series = chart.series.push(am5xy.LineSeries.new(root, {
+  minBulletDistance: 10,
+  connect: false,
+  xAxis: xAxis,
+  yAxis: yAxis,
+  valueYField: "value",
+  valueXField: "date",
+  tooltip: am5.Tooltip.new(root, {
+    pointerOrientation: "horizontal",
+    labelText: "{valueY}"
+  })
+}));
+
+series.fills.template.setAll({
+  fillOpacity: 0.2,
+  visible: true
+});
+
+series.strokes.template.setAll({
+  strokeWidth: 2
+});
+
+
+// Set up data processor to parse string dates
+// https://www.amcharts.com/docs/v5/concepts/data/#Pre_processing_data
+series.data.processor = am5.DataProcessor.new(root, {
+  dateFormat: "yyyy-MM-dd",
+  dateFields: ["date"]
+});
+
+series.data.setAll(data);
+
+series.bullets.push(function() {
+  var circle = am5.Circle.new(root, {
+    radius: 4,
+    fill: root.interfaceColors.get("background"),
+    stroke: series.get("fill"),
+    strokeWidth: 2
+  })
+
+  return am5.Bullet.new(root, {
+    sprite: circle
+  })
+});
+
+series.data.setAll(data);
+// Add cursor
+// https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
+var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
+  xAxis: xAxis,
+  behavior: "none"
+}));
+cursor.lineY.set("visible", false);
+
+// add scrollbar
+chart.set("scrollbarX", am5.Scrollbar.new(root, {
+  orientation: "horizontal"
+}));
+
+
+// Make stuff animate on load
+// https://www.amcharts.com/docs/v5/concepts/animations/
+chart.appear(1000, 100);
+document.addEventListener('DOMContentLoaded', () => {
+	let orgForm = document.querySelector('.corrent-vacancy__blocks');
+	let graphicsForm = document.querySelector('.popup__graphics');
+	if(orgForm) {
+		orgForm.addEventListener('click', e => {
+			const target = e.target;
+			if(target.classList.contains('js-graphics')) {
+				graphicsForm.style.display = 'flex';
+				graphicsForm.animate([
+					{opacity: '0'},
+					{opacity: '1'}
+				], {duration: 300, easing: 'ease-in-out', fill: 'forwards'})
+				dataResponse = [ // 1 tab
+					{
+						'tab':[
+							{
+								'date':'2022-07-04',
+								'value':1,
+							},
+							{
+								'date':'2022-07-05',
+								'value':2,
+							},
+						],
+					},
+					{
+						'tab':[
+							{
+								'date':'2022-07-05',
+								'value':1,
+							},
+							{
+								'date':'2022-07-10',
+								'value':7,
+							},
+						],
+					},
+					{
+						'tab':[
+							{
+								'date':'2022-07-05',
+								'value':2,
+							},
+							{
+								'date':'2022-07-10',
+								'value':8,
+							},
+						],
+					},
+					{
+						'tab':[
+							{
+								'date':'2022-07-01',
+								'value':1,
+							},
+							{
+								'date':'2022-07-02',
+								'value':2,
+							},
+							{
+								'date':'2022-07-03',
+								'value':3,
+							},
+							{
+								'date':'2022-07-10',
+								'value':4,
+							},
+							{
+								'date':'2022-07-11',
+								'value':5,
+							},
+							{
+								'date':'2022-07-12',
+								'value':6,
+							},
+						],
+					},
+				]
+				data = dataResponse[0].tab;
+				series.data.setAll(data);
+			}
+		})
+	}
+	let graphicsTabs = document.querySelector('.popup__graphics-tabs');
+	let graphicsTabsElems = document.querySelectorAll('.popup__graphics-tab');
+	if(graphicsTabs) {
+		graphicsTabs.addEventListener('click', e => {
+			const target = e.target;
+			if(target.classList.contains('popup__graphics-tab')) {
+				graphicsTabsElems.forEach(tab => tab.classList.remove('active'))
+				target.classList.add('active');
+				let targetId = target.getAttribute('data-id');
+				data = dataResponse[targetId].tab;
+				console.log(data)
+				series.data.setAll(data);
+			}
+		})
+	}
+})
+}); 

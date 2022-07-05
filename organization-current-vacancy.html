@@ -327,7 +327,7 @@
                                                     <a href=""><img src="img/hicon.svg" alt=""></a>
                                                     <a href=""><img src="img/delete-basket.svg" alt=""></a>
                                                     <a href=""><img src="img/edit__btn.svg" alt=""></a>
-                                                    <a href=""><img src="img/bar-chart.svg" alt=""></a>
+                                                    <a href="javascript:;" class="js-pointer-events js-graphics"><img src="img/bar-chart.svg" alt=""></a>
                                                 </div>
                                             </div>
                                             <!-- current-vacancy__bottom__block class (red or green) -->
@@ -632,6 +632,24 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="popup__graphics">
+                            <div class="popup__graphics-box">
+                                <div class="popup__graphics-close">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="15" cy="15" r="15" fill="#BBCADF"/>
+                                        <path d="M9.11001 20.8905C9.18314 20.9636 9.27913 21 9.37513 21C9.47113 21 9.56713 20.9632 9.64063 20.8901L15 15.5243L20.3594 20.8901C20.4325 20.9636 20.5285 21 20.6249 21C20.7209 21 20.8169 20.9633 20.89 20.8905C21.0366 20.7443 21.0366 20.5069 20.8904 20.3603L15.5362 15L20.89 9.64017C21.0362 9.49355 21.0362 9.25617 20.8896 9.10992C20.7426 8.9633 20.5056 8.9633 20.3594 9.1103L14.9996 14.4762L9.64025 9.1103C9.49363 8.96367 9.25626 8.96367 9.11001 9.10992C8.96339 9.25617 8.96339 9.49355 9.10964 9.64017L14.463 15L9.10964 20.3603C8.96339 20.5065 8.96339 20.7443 9.11001 20.8905Z" fill="white"/>
+                                        </svg>
+                                                                                                                                                       
+                                </div>
+                                <div class="popup__graphics-tabs">
+                                    <a href="javascript:;" data-id="0" class="popup__graphics-tab active">По дате</a>
+                                    <a href="javascript:;" data-id="1" class="popup__graphics-tab">На заметку</a>
+                                    <a href="javascript:;" data-id="2" class="popup__graphics-tab">Посетившие</a>
+                                    <a href="javascript:;" data-id="3" class="popup__graphics-tab">Заявки</a>
+                                </div>
+                                <div id="chartdiv"></div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
@@ -907,6 +925,13 @@
 
 
 
+
+
+        <!-- graphics scripts -->
+        <script src="js/index.js"></script>
+        <script src="js/xy.js"></script>
+        <script src="js/Animated.js"></script>
+        <!-- graphics scripts -->
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="js/jquery-3.6.0.min.js"></script>
