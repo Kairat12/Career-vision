@@ -4877,6 +4877,10 @@ body::-webkit-scrollbar-thumb {
 
 
 /* scroll */
+
+.hidden-input{
+    display: none;
+}
 @media (max-width: 1900px) {
     .vip-vacancy{
         width: 31%;
