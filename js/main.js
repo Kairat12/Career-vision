@@ -430,24 +430,24 @@ if (swiperTwo) {
 // 	});
 // };
 
-const imgDiv = document.querySelector('.profile-image');
-const img = document.querySelector('.input-img');
-const file = document.querySelector('#upload_img');
-if (file){
-	file.addEventListener('change', function(){
-		const choosedFile = this.files[0];
-		if (choosedFile) {
-			const reader = new FileReader();
-		   reader.addEventListener('load', function(){
-				  if(!img.classList.contains('active')) {
-					  img.classList.add('active');
-				  }
-			  img.setAttribute('src', reader.result);
-		   });
-		   reader.readAsDataURL(choosedFile);
-		}
-	  });
-}
+// const imgDiv = document.querySelector('.profile-image');
+// const img = document.querySelector('.input-img');
+// const file = document.querySelector('#upload_img');
+// if (file){
+// 	file.addEventListener('change', function(){
+// 		const choosedFile = this.files[0];
+// 		if (choosedFile) {
+// 			const reader = new FileReader();
+// 		   reader.addEventListener('load', function(){
+// 				  if(!img.classList.contains('active')) {
+// 					  img.classList.add('active');
+// 				  }
+// 			  img.setAttribute('src', reader.result);
+// 		   });
+// 		   reader.readAsDataURL(choosedFile);
+// 		}
+// 	  });
+// }
 
 const rangeSlider = document.getElementById('range-slider');
 if (rangeSlider) {
@@ -575,14 +575,14 @@ if (filterVacancyBlock){
 // 	$( ".rp__other__checkbox" ).slideToggle( "fast" );
 //   });
 
-$('.checkbox__arrow').on("click", function(e) {
+$('.rp__checkbox__block').on("click", function(e) {
 	const target = e.target
 	  $(target).parent().next().slideToggle("fast");
 	  $(target).parent().toggleClass('active')
 });
 
 const regionCheckbox = document.querySelectorAll('.rp__checkbox__block .region-popup__checkbox');
-const otherCheckbox = document.querySelectorAll('.rp__other__checkbox .region-popup__checkbox');
+const otherCheckbox = document.querySelectorAll('#region-popup .rp__other__checkbox .region-popup__checkbox');
 let chekedCount = 0;
 regionCheckbox.forEach((elem) => {
 	elem.addEventListener('change', function () {
@@ -700,17 +700,18 @@ if(countryChoice){
 			if (elemRadio.checked){
 				countryInput.setAttribute("value", elem.textContent.trim());
 				let cityInputs = cityContent.querySelectorAll('.region-popup__checkbox');
-				let hiddenInput = document.createElement('input');
-				countryInput.setAttribute("id", elem.id)
-				countryInput.parentElement.appendChild(hiddenInput);
-				hiddenInput.style.display = "none"
+				let hiddenInput = countryInput.parentElement.querySelector('.hidden-input');
+				hiddenInput.setAttribute("value", elemRadio.id )
+				countryInput.setAttribute("id", elemRadio.id)
+				// countryInput.parentElement.appendChild(hiddenInput);
 				cityInputs.forEach((el) =>{
+					let parentsDel = el.closest(".region-popup__block");
 					if (el.dataset.country == elemRadio.dataset.country ){
-						// el.parentElement.parentElement.classList.add("show");
-						let parents = el.closest(".region-popup__block");
-						parents.classList.add("show");
-					}else if(el.dataset.country != elemRadio.dataset.country){
-						el.parentElement.parentElement.classList.remove("show");
+						parentsDel.classList.add("show");
+					}
+					if(el.dataset.country !== elemRadio.dataset.country){
+						// let parentDel = el.closest('.region-popup__block');
+						parentsDel.classList.remove("show")
 					}
 				})
 			}
@@ -729,10 +730,10 @@ if(cityChoice){
 		cityInputs.forEach((el) =>{
 			if(el.checked){
 				cityInput.setAttribute("value", el.parentElement.textContent.trim());
-				let hiddenInput = document.createElement('input');
-				cityInput.setAttribute("id", el.id)
-				cityInput.parentElement.appendChild(hiddenInput);
-				hiddenInput.style.display = "none"
+				let hiddenInput = cityInput.parentElement.querySelector('.hidden-input');
+				hiddenInput.setAttribute("value", el.id )
+				// cityInput.parentElement.appendChild(hiddenInput);
+				// hiddenInput.style.display = "none"
 			}
 		})
 	})
@@ -747,10 +748,10 @@ if(typeOrgChoice){
 		cityInputs.forEach((el) =>{
 			if(el.checked && el.id){
 				typeorgInput.setAttribute("value", el.parentElement.textContent.trim());
-				let hiddenInput = document.createElement('input');
-				hiddenInput.setAttribute("id", el.id)
-				typeorgInput.parentElement.appendChild(hiddenInput);
-				hiddenInput.style.display = "none"
+				let hiddenInput = typeorgInput.parentElement.querySelector('.hidden-input');
+				hiddenInput.setAttribute("value", el.id )
+				// typeorgInput.parentElement.appendChild(hiddenInput);
+				// hiddenInput.style.display = "none"
 			}
 		})
 	})

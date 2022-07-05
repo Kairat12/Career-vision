@@ -352,6 +352,7 @@
                                             <div class="register-input">
                                                 <label class="auth-label">Страна </label>
                                                 <input type="text" class="auth-input country-input" required="">
+                                                <input type="text" class="hidden-input">
                                                 <a class="input-icon" data-fancybox="" data-src="#country-popup">
                                                     <span></span>
                                                     <span></span>
@@ -361,6 +362,7 @@
                                         <div class="register-form__content">
                                             <div class="register-input">
                                                 <label class="auth-label">Город</label>
+                                                <input type="text" class="hidden-input">
                                                 <input type="text"  class="auth-input city-input" required>
                                                 <a class="input-icon" data-fancybox="" data-src="#city-popup">
                                                     <span></span>
@@ -383,6 +385,7 @@
                                         <div class="register-form__content">
                                             <div class="register-input">
                                                 <label class="auth-label">Позиция</label>
+                                                <input type="text" class="hidden-input">
                                                 <input type="text"  class="auth-input position-input" required>
                                                 <a class="input-icon" data-fancybox="" data-src="#position-popup">
                                                     <span></span>
@@ -608,7 +611,7 @@
                     </div>
                     <div class="region-popup__block">
                         <label class="region-popup__label">
-                        <input type="radio" class="region-popup__checkbox" id="3" name="city" data-country = "kz">Казахстан</label>
+                        <input type="radio" class="region-popup__checkbox" id="3" name="city" data-country = "ru">Казахстан</label>
                     </div>
                     <div class="region-popup__block region-popup__dd__block">
                         <div class="rp__checkbox__block">
@@ -618,65 +621,11 @@
                         </div>
                         <div class="rp__other__checkbox" style="display: none;">
                             <label class="region-popup__label">
-                                <input type="radio" class="region-popup__checkbox" id="5" name="city">Акколь</label>
+                                <input type="radio" class="region-popup__checkbox" id="5" data-country = "kz" name="city">Акколь</label>
                             <label class="region-popup__label">
-                                <input type="radio" class="region-popup__checkbox" id="6" name="city">Атбасар</label>
+                                <input type="radio" class="region-popup__checkbox" id="6" data-country = "kz" name="city">Атбасар</label>
                             <label class="region-popup__label">
-                                <input type="radio" class="region-popup__checkbox" id="7" name="city">Державинск</label>
-                        </div>
-                    </div>
-                    <div class="region-popup__block region-popup__dd__block">
-                        <div class="rp__checkbox__block">
-                            <span class="checkbox__arrow"></span><input type="checkbox" id="8"
-                                class="region-popup__checkbox"><label class="region-popup__label"
-                                for="8">Акмолинская область</label>
-                        </div>
-                        <div class="rp__other__checkbox" style="display: none;">
-                            <div class="other__checkbox__block"><input type="checkbox"
-                                    class="region-popup__checkbox" id="9"><label class="region-popup__label"
-                                    for="9">Акколь</label></div>
-                            <div class="other__checkbox__block"><input type="checkbox"
-                                    class="region-popup__checkbox" id="10"><label class="region-popup__label"
-                                    for="10">Атбасар</label></div>
-                            <div class="other__checkbox__block"><input type="checkbox"
-                                    class="region-popup__checkbox" id="11"><label class="region-popup__label"
-                                    for="11">Державинск</label></div>
-                        </div>
-                    </div>
-                    <div class="region-popup__block region-popup__dd__block">
-                        <div class="rp__checkbox__block">
-                            <span class="checkbox__arrow"></span><input type="checkbox" id="12"
-                                class="region-popup__checkbox"><label class="region-popup__label"
-                                for="12">Акмолинская область</label>
-                        </div>
-                        <div class="rp__other__checkbox" style="display: none;">
-                            <div class="other__checkbox__block"><input type="checkbox"
-                                    class="region-popup__checkbox" id="13"><label class="region-popup__label"
-                                    for="13">Акколь</label></div>
-                            <div class="other__checkbox__block"><input type="checkbox"
-                                    class="region-popup__checkbox" id="14"><label class="region-popup__label"
-                                    for="14">Атбасар</label></div>
-                            <div class="other__checkbox__block"><input type="checkbox"
-                                    class="region-popup__checkbox" id="15"><label class="region-popup__label"
-                                    for="15">Державинск</label></div>
-                        </div>
-                    </div>
-                    <div class="region-popup__block region-popup__dd__block">
-                        <div class="rp__checkbox__block">
-                            <span class="checkbox__arrow"></span><input type="checkbox" id="16"
-                                class="region-popup__checkbox"><label class="region-popup__label"
-                                for="17">Акмолинская область</label>
-                        </div>
-                        <div class="rp__other__checkbox" style="display: none;">
-                            <div class="other__checkbox__block"><input type="checkbox"
-                                    class="region-popup__checkbox" id="18"><label class="region-popup__label"
-                                    for="18">Акколь</label></div>
-                            <div class="other__checkbox__block"><input type="checkbox"
-                                    class="region-popup__checkbox" id="19"><label class="region-popup__label"
-                                    for="19">Атбасар</label></div>
-                            <div class="other__checkbox__block"><input type="checkbox"
-                                    class="region-popup__checkbox" id="20"><label class="region-popup__label"
-                                    for="20">Державинск</label></div>
+                                <input type="radio" class="region-popup__checkbox" id="7" data-country = "kz" name="city">Державинск</label>
                         </div>
                     </div>
                 </div>
@@ -701,31 +650,34 @@
                     </div>
                 </div>
                 <div class="region-popup__content position-popup__content">
-                    <div class="region-popup__block">
-                        <label class="region-popup__label" >
-                        <input type="radio" class="region-popup__checkbox" id="1" name="city" data-country = "kz">Казахстан</label>
-                    </div>
-                    <div class="region-popup__block">
-                        <label class="region-popup__label" >
-                        <input type="radio" class="region-popup__checkbox" id="2" name="city" data-country = "kz">Казахстан</label>
-                    </div>
-                    <div class="region-popup__block">
-                        <label class="region-popup__label">
-                        <input type="radio" class="region-popup__checkbox" id="3" name="city" data-country = "kz">Казахстан</label>
+                    <div class="region-popup__block region-popup__dd__block">
+                        <div class="rp__checkbox__block">
+                            <span class="checkbox__arrow"></span>
+                            <label class="region-popup__label">
+                                административный состав:</label>
+                        </div>
+                        <div class="rp__other__checkbox" style="display: none;">
+                            <label class="region-popup__label">
+                                <input type="radio" class="region-popup__checkbox" id="5" name="city">главный исполнительный директор (CEO)</label>
+                            <label class="region-popup__label">
+                                <input type="radio" class="region-popup__checkbox" id="6" name="city">учитель</label>
+                            <label class="region-popup__label">
+                                <input type="radio" class="region-popup__checkbox" id="7" name="city">учитель</label>
+                        </div>
                     </div>
                     <div class="region-popup__block region-popup__dd__block">
                         <div class="rp__checkbox__block">
                             <span class="checkbox__arrow"></span>
                             <label class="region-popup__label">
-                                <input type="radio" class="region-popup__checkbox" id="4" data-country = "kz">asdasd</label>
+                                преподавательский состав:</label>
                         </div>
                         <div class="rp__other__checkbox" style="display: none;">
                             <label class="region-popup__label">
-                                <input type="radio" class="region-popup__checkbox" id="5" name="city">Акколь</label>
+                                <input type="radio" class="region-popup__checkbox" id="5" name="city">учитель</label>
                             <label class="region-popup__label">
-                                <input type="radio" class="region-popup__checkbox" id="6" name="city">Атбасар</label>
+                                <input type="radio" class="region-popup__checkbox" id="6" name="city">методист</label>
                             <label class="region-popup__label">
-                                <input type="radio" class="region-popup__checkbox" id="7" name="city">Державинск</label>
+                                <input type="radio" class="region-popup__checkbox" id="7" name="city">лектор</label>
                         </div>
                     </div>
                     
