@@ -6593,6 +6593,9 @@ body::-webkit-scrollbar-thumb {
     .data-aplicants__content .search__right__block .region-popup__label{
         width: 100%;
     }
+    .data-aplicants__content .ruqest__message__item{
+        width: 100%;
+    }
 
 }
 @media (max-width: 768.98px) {
