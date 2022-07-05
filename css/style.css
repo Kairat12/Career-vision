@@ -4895,6 +4895,12 @@ input::-webkit-inner-spin-button {
     font-size: 14px;
     line-height: 1.7;
     color: #61707B;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.tarifs__top__content .search-content__block{
+    width: 100%;
 }
 
 
