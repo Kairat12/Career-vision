@@ -4889,6 +4889,13 @@ input::-webkit-inner-spin-button {
     border-bottom: none;
     padding: 5px 10px;
 }
+.small-text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #61707B;
+}
+
 
 /* Organization pages*/
 
@@ -5562,6 +5569,9 @@ body::-webkit-scrollbar-thumb {
     }
     .data-aplicants__content .request__texts span{
         font-size: 14px;
+    }
+    .small-text{
+        font-size: 12px;
     }
 
 }
