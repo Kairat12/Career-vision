@@ -4897,10 +4897,26 @@ input::-webkit-inner-spin-button {
     color: #61707B;
     display: flex;
     height: 100%;
-    align-items: center;
+    padding-top: 30px;
+    align-items: flex-start;
 }
 .tarifs__top__content .search-content__block{
     width: 100%;
+}
+.tarifs__top__content .data-aplicant-inputs{
+    border-bottom: none;
+}
+.tarifs__top__content .region-popup__label{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 20px;
+}
+.tarifs__top__content .register-input .position__block{
+    margin-bottom: 20px;
+}
+.tarifs__top__content .search__btn input{
+    background: #22E388;
 }
 
 
@@ -6729,6 +6745,15 @@ body::-webkit-scrollbar-thumb {
     }
     .data-aplicants__content .ruqest__message__item{
         width: 100%;
+    }
+    .small-text{
+        padding-top: 0;
+    }
+    .tarifs__top__content .save-vacancy__tabs_btn, .search__btn{
+        width: 100%;
+    }
+    .tarifs__top__content .search__btn{
+        padding-bottom: 0;
     }
 
 }
