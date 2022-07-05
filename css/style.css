@@ -4831,7 +4831,14 @@ input::-webkit-inner-spin-button {
     font-weight: 500;
     font-size: 16px;
 }
-.data-aplicants__content .request__texts .green-text{
+.data-aplicants__content .request__texts h3{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+    color: #32374A;
+    margin-bottom: 15px;
+}
+.green-text{
     color: #22E388;
 }
 .data-aplicants__content .reuqest__message__block{
@@ -4917,6 +4924,11 @@ input::-webkit-inner-spin-button {
 }
 .tarifs__top__content .search__btn input{
     background: #22E388;
+}
+.data-aplicants__content .request__texts .aplicant__subject{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
 }
 
 
@@ -5659,6 +5671,9 @@ body::-webkit-scrollbar-thumb {
     }
     .small-text{
         font-size: 12px;
+    }
+    .data-aplicants__content .request__texts h3{
+        font-size: 20px;
     }
 
 }
@@ -6407,6 +6422,9 @@ body::-webkit-scrollbar-thumb {
     }
     .current-vacancy__top__btns{
         justify-content: flex-start;
+    }
+    .data-aplicants__content .request__texts h3{
+        font-size: 18px;
     }
 }
 @media (max-width: 991.98px) {
