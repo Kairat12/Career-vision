@@ -4871,7 +4871,24 @@ input::-webkit-inner-spin-button {
     background: linear-gradient(264.16deg, #8359F9 -0.96%, #22A2FB 103.21%);
 
 }
-
+.tarifs__top__content .save-vacancy__tabs_btn{
+    width: 60%;
+}
+.tarifs__top__content .register-inputs{
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(146, 157, 175, 0.35);
+}
+.tarifs__top__content .register-input .auth-label{
+    color: #32374A;
+    font-weight: 700;
+}
+.tarifs__top__content .register-input .auth-input,.tarifs__top__content .select-selected {
+    border-radius: 10px;
+    background: #FFFFFF;
+    border-bottom: none;
+    padding: 5px 10px;
+}
 
 /* Organization pages*/
 

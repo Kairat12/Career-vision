@@ -430,24 +430,24 @@ if (swiperTwo) {
 // 	});
 // };
 
-const imgDiv = document.querySelector('.profile-image');
-const img = document.querySelector('.input-img');
-const file = document.querySelector('#upload_img');
-if (file){
-	file.addEventListener('change', function(){
-		const choosedFile = this.files[0];
-		if (choosedFile) {
-			const reader = new FileReader();
-		   reader.addEventListener('load', function(){
-				  if(!img.classList.contains('active')) {
-					  img.classList.add('active');
-				  }
-			  img.setAttribute('src', reader.result);
-		   });
-		   reader.readAsDataURL(choosedFile);
-		}
-	  });
-}
+// const imgDiv = document.querySelector('.profile-image');
+// const img = document.querySelector('.input-img');
+// const file = document.querySelector('#upload_img');
+// if (file){
+// 	file.addEventListener('change', function(){
+// 		const choosedFile = this.files[0];
+// 		if (choosedFile) {
+// 			const reader = new FileReader();
+// 		   reader.addEventListener('load', function(){
+// 				  if(!img.classList.contains('active')) {
+// 					  img.classList.add('active');
+// 				  }
+// 			  img.setAttribute('src', reader.result);
+// 		   });
+// 		   reader.readAsDataURL(choosedFile);
+// 		}
+// 	  });
+// }
 
 const rangeSlider = document.getElementById('range-slider');
 if (rangeSlider) {
