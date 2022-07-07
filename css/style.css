@@ -5021,6 +5021,9 @@ input::-webkit-inner-spin-button {
 .blue__link.active img{
     transform: rotate(180deg);
 }
+.data-aplicants__content .search__btn{
+    justify-content: start;
+}
 /* Organization pages*/
 
 
