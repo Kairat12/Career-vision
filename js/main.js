@@ -1026,7 +1026,6 @@ if(graphicsBlock) {
 		"date": "2012-07-28",
 		"value": 11
 	}];
-	
 	am5.ready(function() {
 	// Create root element
 	// https://www.amcharts.com/docs/v5/getting-started/#Root_element
@@ -1246,7 +1245,6 @@ if(graphicsBlock) {
 					}
 				})
 			}
-
 			let graphicsPopup = document.querySelector('.popup__graphics')
 			if(graphicsPopup) {
 				graphicsPopup.addEventListener('click', e => {
@@ -1263,7 +1261,55 @@ if(graphicsBlock) {
 				})
 			}
 		}
-	
-	})
+	});
 	}); 
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+	// files uploads
+	let filesBlock = document.querySelector('.js-files-block');
+	if(filesBlock) {
+		let filesUpload = document.querySelector('.js-upload-files');
+		let filesBlockBody = document.querySelector('.ai__bottom__block');
+		let hiddenInputFiles = document.querySelector('.js-array-remove-ids');
+		let filesArray;
+		let filesArrayIndexRemoves = [];
+		filesUpload.addEventListener('input', () => {
+			let filesChild = filesBlockBody.querySelectorAll('.ai__bottom__item');
+			filesArray = [];
+			filesArrayIndexRemoves = [];
+			hiddenInputFiles.value = '';
+			if(filesChild.length) {
+				filesChild.forEach(item => item.remove());
+			}
+			for(let i = 0; i < filesUpload.files.length; i++) {
+				let fileBlock = document.createElement('div');
+				fileBlock.classList.add('ai__bottom__item');
+				fileBlock.innerHTML += `
+				<label class="filupp">
+                    <span class="filupp-file-name">${filesUpload.files[i].name}</span>
+                </label>
+                <span class="file__delete"><img src="img/x.svg" alt=""></span>
+				`;
+				filesBlockBody.appendChild(fileBlock);
+				filesArray.push(filesUpload.files[i].name)
+			}
+			console.log(filesArray)
+			console.log(filesUpload.files)
+		})
+		filesBlockBody.addEventListener('click', e => {
+			const target = e.target;
+			if(target.classList.contains('ai__bottom__item')) {
+				let myIndex = filesArray.indexOf(target.querySelector('.filupp-file-name').textContent);
+				// filesArray.splice(myIndex, 1)
+				target.style.display = 'none';
+				console.log(filesArray)
+				// target.remove();
+				filesArrayIndexRemoves.push(myIndex);
+				console.log(filesArrayIndexRemoves)
+				hiddenInputFiles.value = filesArrayIndexRemoves;
+				console.log(hiddenInputFiles.value)
+			}
+		})
+	}
+})
