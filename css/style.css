@@ -2797,6 +2797,8 @@ input.error .password-control{
     top: -81px;
     width: 120px;
     height: 120px;
+    border-radius: 50%;
+    background: #fff;
 }
 .aplicant__info__photo img{
     width: 100%;
@@ -5072,8 +5074,25 @@ input::-webkit-inner-spin-button {
 .close-btn span::before{
     transform: rotate(-45deg);
 }
+.aplicant__header__img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+.header__right__aplic{
+    width: 15%;
+    justify-content: flex-start;
+    column-gap: 20px;
+}
 /* Organization pages*/
 
+.header__right__aplic .mobile-logout{
+    display: none;
+}
+.header__right__aplic .desktop-logout{
+    display: block;
+}
 
 /* scroll */
 .vip-vacancy::-webkit-scrollbar, body::-webkit-scrollbar,.ai__bottom__block::-webkit-scrollbar {
@@ -5660,6 +5679,9 @@ body::-webkit-scrollbar-thumb {
     }
     .right-main__block-btns .auth__btn a{
         padding: 22px 80px;
+    }
+    .header__right__aplic{
+        width: 22%;
     }
 }
 @media (max-width:1600px){
@@ -6375,6 +6397,10 @@ body::-webkit-scrollbar-thumb {
     .resume__info__middle__text, .resume__info__middle__block_flex,.blue__link{
         font-size: 14px;
     }
+    .aplicant__header__img{
+        width: 50px;
+        height: 50px;
+    }
 
 }
 @media (max-width: 1199.98px) {
@@ -6921,6 +6947,19 @@ body::-webkit-scrollbar-thumb {
     }
     .tarifs__top__content .search__btn{
         padding-bottom: 0;
+    }
+    .header__right__aplic{
+        flex-direction: row;
+        align-items: center;
+    }
+    .header__right__aplic .header-right__signin{
+        position: static;
+    }
+    .header__right__aplic .mobile-logout{
+        display: block;
+    }
+    .header__right__aplic .desktop-logout{
+        display: none;
     }
 
 }

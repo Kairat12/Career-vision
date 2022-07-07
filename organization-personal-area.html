@@ -316,6 +316,7 @@
                                                 <div class="register-input">
                                                     <label class="auth-label">Страна </label>
                                                     <input type="text" class="auth-input country-input" required="">
+                                                    <input type="text" class="hidden-input">
                                                     <a class="input-icon" data-fancybox="" data-src="#country-popup">
                                                         <span></span>
                                                         <span></span>
@@ -324,6 +325,7 @@
                                                 <div class="register-input">
                                                     <label class="auth-label">Город</label>
                                                     <input type="text"  class="auth-input city-input" required>
+                                                    <input type="text" class="hidden-input">
                                                     <a class="input-icon" data-fancybox="" data-src="#city-popup">
                                                         <span></span>
                                                         <span></span>
@@ -448,24 +450,24 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="additional-information__content">
+                                    <div class="additional-information__content js-files-block">
                                         <div class="ai__top__text">
                                             <p class="gray_text">Дополнительная информация</p>
-                                            <label class="filupp">
+                                            <!-- <label class="filupp">
                                                 <img src="img/upload__file.png" alt="">
                                                 <input type="file" name="attachment-file" multiple class="custom-file-upload">
+                                            </label> -->
+                                            <label class="filupp fillupp-btn">
+                                                <img src="img/upload__file.png" alt="">
+                                                <input type="file" name="attachment-file" multiple="" class="custom-file-upload js-upload-files">
                                             </label>
+                                            <input type="hidden" class="js-array-remove-ids">
                                         </div>
                                         <div class="ai__middle__text">
                                             <p>Учитывая ключевые сценарии поведения, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовке и реализации поставленных обществом задач. Кстати, базовые сценарии поведения пользователей представлены в исключительно положительном свете. Принимая во внимание показатели успешности, синтетическое тестирование, в своём классическом представлении, допускает внедрение соответствующих условий активизации.</p>
                                         </div>
                                         <div class="ai__bottom__block">
                                             <div class="ai__bottom__item">
-                                                <label class="filupp">
-                                                    <span class="filupp-file-name js-value">Загрузить файл</span>
-                                                    <input type="file" required name="attachment-file" value="1" class="custom-file-upload">
-                                                </label>
-                                                <span class="file__delete"><img src="img/x.svg" alt=""></span>
                                             </div>
                                         </div>
                                     </div>
@@ -531,13 +533,17 @@
                                     <div class="vip-vacancy__wrapper">
                                         <div class="vip-vacancy__top__block">
                                             <img src="img/vip-vacancy1.png" alt="" class="vip-vacancy-img">
+                                            <a href="http://">
                                             <div class="vip-vacancy__top__text">
                                                 <p>ТОО ЭКО-Школа Живая Вселенная</p>
                                                 <span>г. Нур-Султан</span>
                                             </div>
+                                        </a>
                                             <img src="img/vip-vacancy_fire.png" alt="" class="vip-vacnacy-fire">
                                         </div>
+                                        <a href="">
                                         <p>Учитель математики - алгебры/геометрии (с русским языком обучения)</p>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="vip-vacancy__block">
