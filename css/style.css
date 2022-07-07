@@ -4363,6 +4363,7 @@ input::-webkit-inner-spin-button {
     flex-wrap: wrap;
     row-gap: 10px;
     column-gap: 2%;
+    min-height: 48px;
 }
 .ai__bottom__item{
     display: flex;
@@ -4463,7 +4464,7 @@ input::-webkit-inner-spin-button {
     height: auto;
 }
 
-.ai__bottom__item * {
+.ai__bottom__item .filupp {
     pointer-events: none;
 }
 
@@ -5084,6 +5085,12 @@ input::-webkit-inner-spin-button {
     width: 15%;
     justify-content: flex-start;
     column-gap: 20px;
+}
+.additional-information__content .js__upload__file__block{
+    display: none;
+}
+.additional-information__content.active .js__upload__file__block{
+    display: flex;
 }
 /* Organization pages*/
 
@@ -5842,6 +5849,9 @@ body::-webkit-scrollbar-thumb {
     }
     .blue__link{
         font-size: 16px;
+    }
+    .left-menu-list li::before, .settings-and-support-list li::before{
+        left: -30px;
     }
 
 }
@@ -6960,6 +6970,9 @@ body::-webkit-scrollbar-thumb {
     }
     .header__right__aplic .desktop-logout{
         display: none;
+    }
+    .left-menu-list li::before, .settings-and-support-list li::before{
+        left: -20px;
     }
 
 }

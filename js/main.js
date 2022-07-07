@@ -1265,51 +1265,62 @@ if(graphicsBlock) {
 	}); 
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
 	// files uploads
-	let filesBlock = document.querySelector('.js-files-block');
+	let filesBlock = document.querySelectorAll('.js-files-block');
 	if(filesBlock) {
-		let filesUpload = document.querySelector('.js-upload-files');
-		let filesBlockBody = document.querySelector('.ai__bottom__block');
-		let hiddenInputFiles = document.querySelector('.js-array-remove-ids');
-		let filesArray;
-		let filesArrayIndexRemoves = [];
-		filesUpload.addEventListener('input', () => {
-			let filesChild = filesBlockBody.querySelectorAll('.ai__bottom__item');
-			filesArray = [];
-			filesArrayIndexRemoves = [];
-			hiddenInputFiles.value = '';
-			if(filesChild.length) {
-				filesChild.forEach(item => item.remove());
-			}
-			for(let i = 0; i < filesUpload.files.length; i++) {
-				let fileBlock = document.createElement('div');
-				fileBlock.classList.add('ai__bottom__item');
-				fileBlock.innerHTML += `
-				<label class="filupp">
-                    <span class="filupp-file-name">${filesUpload.files[i].name}</span>
-                </label>
-                <span class="file__delete"><img src="img/x.svg" alt=""></span>
-				`;
-				filesBlockBody.appendChild(fileBlock);
-				filesArray.push(filesUpload.files[i].name)
-			}
-			console.log(filesArray)
-			console.log(filesUpload.files)
-		})
-		filesBlockBody.addEventListener('click', e => {
-			const target = e.target;
-			if(target.classList.contains('ai__bottom__item')) {
-				let myIndex = filesArray.indexOf(target.querySelector('.filupp-file-name').textContent);
-				// filesArray.splice(myIndex, 1)
-				target.style.display = 'none';
+		filesBlock.forEach(elem =>{
+			let filesUpload = elem.querySelector('.js-upload-files');
+			let filesBlockBody = elem.querySelector('.js__upload__file__block');
+			let hiddenInputFiles = elem.querySelector('.js-array-remove-ids');
+			let filesArray;
+			let filesArrayIndexRemoves = [];
+			filesUpload.addEventListener('input', () => {
+				let filesChild = filesBlockBody.querySelectorAll('.ai__bottom__item');
+				filesArray = [];
+				filesArrayIndexRemoves = [];
+				hiddenInputFiles.value = '';
+				if(filesChild.length) {
+					filesChild.forEach(item => item.remove());
+				}
+				for(let i = 0; i < filesUpload.files.length; i++) {
+					let fileBlock = document.createElement('div');
+					fileBlock.classList.add('ai__bottom__item');
+					fileBlock.innerHTML += `
+					<label class="filupp">
+						<span class="filupp-file-name">${filesUpload.files[i].name}</span>
+					</label>
+					<span class="file__delete"><img src="img/x.svg" alt=""></span>
+					`;
+					filesBlockBody.appendChild(fileBlock);
+					filesArray.push(filesUpload.files[i].name)
+				}
+				elem.classList.add('active')
 				console.log(filesArray)
-				// target.remove();
-				filesArrayIndexRemoves.push(myIndex);
-				console.log(filesArrayIndexRemoves)
-				hiddenInputFiles.value = filesArrayIndexRemoves;
-				console.log(hiddenInputFiles.value)
+				console.log(filesUpload.files)
+			})
+			if (filesBlockBody){
+				filesBlockBody.addEventListener('click', e => {
+					const target = e.target;
+					// if(target.classList.contains('ai__bottom__item')) {
+					if(target.classList.contains('file__delete')) {
+						let myIndex = filesArray.indexOf(target.parentElement.querySelector('.filupp-file-name').textContent);
+						// filesArray.splice(myIndex, 1)
+						target.parentElement.style.display = 'none';
+						console.log(filesArray)
+						// target.remove();
+						filesArrayIndexRemoves.push(myIndex);
+						console.log(filesArrayIndexRemoves)
+						hiddenInputFiles.value = filesArrayIndexRemoves;
+						console.log(hiddenInputFiles.value)
+					}
+				})
 			}
+
 		})
+
 	}
 })
+
+
