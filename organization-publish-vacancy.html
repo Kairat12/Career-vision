@@ -384,20 +384,20 @@
                                             <input type="date" class="auth-input" name="lname" required="" aria-required="true">
                                         </div>
                                         <span>Вакансию можно выбрать в течение 30 дней с момента покупки в выбранном регионе. При покупке от 10 штук вакансии можно разместить в течение 365 дней</span>
-                                        <div class="publush__vacancy__input">
+                                        <div class="publush__vacancy__input js-files-block">
                                             <label class="auth-label" for="name">Сопутствующие документы</label>
-                                            <label class="filupp fillupp-btn">
-                                                <img src="img/upload__file.png" alt="">
-                                                <input type="file" name="attachment-file" multiple="" class="custom-file-upload">
-                                            </label>
                                             <div class="ai__bottom__block">
-                                                <div class="ai__bottom__item">
+                                                <!-- <div class="ai__bottom__item">
                                                     <label class="filupp">
                                                         <span class="filupp-file-name js-value">Загрузить файл</span>
-                                                        <input type="file" required="" name="attachment-file" value="1" class="custom-file-upload">
                                                     </label>
                                                     <span class="file__delete"><img src="img/x.svg" alt=""></span>
-                                                </div>
+                                                </div> -->
+                                                <label class="filupp fillupp-btn">
+                                                    <img src="img/upload__file.png" alt="">
+                                                    <input type="file" name="attachment-file" multiple="" class="custom-file-upload js-upload-files">
+                                                </label>
+                                                <input type="hidden" class="js-array-remove-ids">
                                             </div>
                                             <div class="publish__vacancy__btns">
                                                 <input type="submit" class="publish__btn" data-fancybox="" data-src="#popup">

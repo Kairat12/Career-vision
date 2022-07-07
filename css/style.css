@@ -4349,6 +4349,7 @@ input::-webkit-inner-spin-button {
     color: #32374A;
 }
 .ai__bottom__block{
+    position: relative;
     background: #EDEDED;
     border-radius: 10px;
     padding: 10px;
@@ -4454,16 +4455,25 @@ input::-webkit-inner-spin-button {
     position: static;
     height: auto;
 }
+
+.ai__bottom__item * {
+    pointer-events: none;
+}
+
 .publish__vacancy__content .fillupp-btn{
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     width: auto;
     left: auto;
     display: block;
+    padding-left: 0;
 }
 .publish__vacancy__content .ai__bottom__block{
     width: 100%;
+    min-height: 46px;
+    padding-right: 30px;
 }
 .publish__vacancy__btns{
     display: flex;
