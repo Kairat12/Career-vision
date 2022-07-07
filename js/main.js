@@ -567,6 +567,20 @@ if (filterVacancyBlock){
 	})
 }
 
+// BLue Link Show More
+
+const BlueLink = document.querySelectorAll('.resume__info__block');
+if (BlueLink){
+	BlueLink.forEach(elem =>{
+		elem.addEventListener("click", function(e){
+			let target  = e.target;
+			if (target.classList.contains('blue__link')){
+				target.classList.toggle("active");
+				elem.classList.toggle("active")
+			}
+		})	
+	})
+}
 
 
 // $( ".checkbox__arrow" ).click(function() {
