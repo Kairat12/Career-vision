@@ -857,15 +857,6 @@ if (addTable){
 	})
 }
 
-const aiFileDeleter = document.querySelector('.ai__bottom__block');
-if (aiFileDeleter){
-	aiFileDeleter.addEventListener("click", function(e){
-			let target = e.target;
-			if (target.classList.contains('file__delete')){
-				target.parentElement.remove();
-			}
-		})
-	}
 
 // const aiToptext = document.querySelectorAll('.ai__top__text');
 // if(aiToptext){
@@ -1323,4 +1314,20 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 })
 
-
+const aiFileDeleter = document.querySelector('.ai__bottom__block');
+if (aiFileDeleter){
+	let arrayIndexRemove = [];
+	aiFileDeleter.addEventListener("click", function(e){
+			let target = e.target;
+			let arrayRemover = document.querySelector('.js-db-remover');
+			arrayRemover.value = '';
+			if (target.classList.contains('file__delete')){
+				arrayIndexRemove.push(target.closest('.ai__bottom__item').dataset.id);
+				target.closest('.ai__bottom__item').style.display = 'none';
+				arrayRemover.value = arrayIndexRemove;
+			}
+			// if (aiFileDeleter.children.style.display == 'none'){
+			// 	aiFileDeleter.classList.add('active')
+			// }
+		})
+	}
