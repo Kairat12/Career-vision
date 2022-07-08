@@ -1324,8 +1324,8 @@ if (aiFileDeleter){
 				target.closest('.ai__bottom__item').style.display = 'none';
 				arrayRemover.value = arrayIndexRemove;
 			}
-			if (aiFileDeleter.offsetHeight < '49px'){
-				aiFileDeleter.classList.add('active')
+			if (aiFileDeleter.offsetHeight < 43){
+				aiFileDeleter.classList.add('hidden')
 			}
 		})
 	}
@@ -1343,8 +1343,8 @@ if (aiImageDeleter){
 				target.closest('.ai__bottom__img').style.display = 'none';
 				arrayRemover.value = arrayIndexRemove;
 			}
-			// if (aiFileDeleter.children.style.display == 'none'){
-			// 	aiFileDeleter.classList.add('active')
-			// }
+			if (aiImageDeleter.offsetHeight < 43){
+				aiImageDeleter.classList.add('hidden')
+			}
 		})
 	}

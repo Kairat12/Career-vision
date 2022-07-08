@@ -4363,7 +4363,10 @@ input::-webkit-inner-spin-button {
     flex-wrap: wrap;
     row-gap: 10px;
     column-gap: 2%;
-    min-height: 48px;
+    min-height: 42px;
+}
+.ai__bottom__block.hidden{
+    display: none;
 }
 .ai__bottom__item{
     display: flex;
@@ -5060,6 +5063,7 @@ input::-webkit-inner-spin-button {
 .close-btn *{
     pointer-events: none;
 }
+
 .close-btn span{
     position: relative;
     width: 15px;
@@ -5094,6 +5098,9 @@ input::-webkit-inner-spin-button {
 }
 .additional-information__content.active .js__upload__file__block{
     display: flex;
+}
+.additional-information__content .js__upload__file__block.hidden{
+    display: none;
 }
 /* Organization pages*/
 

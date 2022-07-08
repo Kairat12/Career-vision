@@ -389,13 +389,12 @@
                                                 </div>
                                                 <div class="register-input">
                                                     <label class="auth-label">Тип организации</label>
-                                                    <div class="custom-select">
-                                                        <select>
-                                                            <option value="0">Тип организации</option>
-                                                            <option value="1">Частный</option>
-                                                            <option value="2">Частный</option>
-                                                        </select>
-                                                    </div>
+                                                    <input type="text"  class="auth-input type-organization-input" required>
+                                                    <input type="text" class="hidden-input">
+                                                    <a class="input-icon" data-fancybox="" data-src="#type-org-popup">
+                                                        <span></span>
+                                                        <span></span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -571,7 +570,7 @@
                                             <img src="img/edit_btn.svg" class="input-edit__btn" alt="">
                                         </div>
                                         <div class="ai__bottom__block">
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/_qni0b3jMc4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/_qni0b3jMc4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                                         </div>
                                     </div>
                                     <div class="additional-information__content">
@@ -581,7 +580,7 @@
                                             <img src="img/edit_btn.svg" class="input-edit__btn" alt="">
                                         </div>
                                         <div class="contact__map">
-                                            <div style="position:relative;overflow:hidden;"><a href="https://yandex.kz/maps/org/244776784081/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Altay center</a><a href="https://yandex.kz/maps/163/nur-sultan/category/business_center/184107509/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Бизнес-центр в Нур‑Султане</a><iframe src="https://yandex.kz/map-widget/v1/-/CCUN4MtycB" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                                            <!-- <div style="position:relative;overflow:hidden;"><a href="https://yandex.kz/maps/org/244776784081/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Altay center</a><a href="https://yandex.kz/maps/163/nur-sultan/category/business_center/184107509/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Бизнес-центр в Нур‑Султане</a><iframe src="https://yandex.kz/map-widget/v1/-/CCUN4MtycB" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div> -->
                                         </div>
                                     </div>
                                     <div class="register__btn">
@@ -861,7 +860,87 @@
 				</div>
 			</div>
 
+  <!-- type-org popup -->
+  <div class="popup" id="type-org-popup" style="display: none;">
+    <div class="request-fixed">
+        <div class="request-block region-blocks">
+            <div class="region_popup-input">
+                <input type="text" id="fname" class="region_input" placeholder="Выберите регион и город">
+                <div class="input-icon">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="region-popup__content type-org-popup__content">
+                <div class="region-popup__block region-popup__dd__block">
+                    <div class="rp__checkbox__block">
+                        <span class="checkbox__arrow"></span>
+                        <label class="region-popup__label">
+                            Дошкольная:</label>
+                    </div>
+                    <div class="rp__other__checkbox" style="display: none;">
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="5" name="city">Ясли-сад</label>
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="6" name="city">Детский сад</label>
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="7" name="city">Семеный ясли-сад</label>
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="8" name="city">Дошкольный мини-центр</label>
+                    </div>
+                </div>
+                <div class="region-popup__block region-popup__dd__block">
+                    <div class="rp__checkbox__block">
+                        <span class="checkbox__arrow"></span>
+                        <label class="region-popup__label">
+                            Средняя:  (по уровню образования)</label>
+                    </div>
+                    <div class="rp__other__checkbox" style="display: none;">
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="51" name="city">Начальная школа</label>
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="62" name="city">Основная средняя школа</label>
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="71" name="city">Общеобразовательная школа</label>
+                    </div>
+                </div>
+                <div class="region-popup__block region-popup__dd__block">
+                    <div class="rp__checkbox__block">
+                        <span class="checkbox__arrow"></span>
+                        <label class="region-popup__label">
+                            Дополнительно (необязательно):</label>
+                    </div>
+                    <div class="rp__other__checkbox" style="display: none;">
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="53" name="city">Специализированная школа-лицей</label>
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="66" name="city">Назарбаев интелектуальная школа</label>
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="77" name="city">Специализированная музыкальная школа-лицей</label>
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="78" name="city">Специализированная хореографическая школа</label>
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="79" name="city">Лицей-интернат «Білім-Инновация»</label>
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="80" name="city">Международная школа</label>
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="81" name="city"> Частная школа</label>
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="82" name="city"> Учебный центр</label>
+                        <label class="region-popup__label">
+                            <input type="radio" class="region-popup__checkbox" id="83" name="city"> Другое</label>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="popup_bottom_btns">
+                <a href="#" class="popup_bottom_btn" data-fancybox-close="">Отменить</a>
+                <a href="#" class="popup_bottom_btn" id="type-org-popup-btn" data-fancybox-close="">Выбрать</a>
+            </div>
 
+        </div>
+    </div>
+</div>
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
