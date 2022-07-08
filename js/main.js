@@ -1326,6 +1326,25 @@ if (aiFileDeleter){
 				target.closest('.ai__bottom__item').style.display = 'none';
 				arrayRemover.value = arrayIndexRemove;
 			}
+			if (aiFileDeleter.offsetHeight < '49px'){
+				aiFileDeleter.classList.add('active')
+			}
+		})
+	}
+
+
+const aiImageDeleter = document.querySelector('.js__image__parent');
+if (aiImageDeleter){
+	let arrayIndexRemove = [];
+	aiImageDeleter.addEventListener("click", function(e){
+			let target = e.target;
+			let arrayRemover = document.querySelector('.js-db-img-remover');
+			arrayRemover.value = '';
+			if (target.classList.contains('close-btn')){
+				arrayIndexRemove.push(target.closest('.ai__bottom__img').dataset.id);
+				target.closest('.ai__bottom__img').style.display = 'none';
+				arrayRemover.value = arrayIndexRemove;
+			}
 			// if (aiFileDeleter.children.style.display == 'none'){
 			// 	aiFileDeleter.classList.add('active')
 			// }
