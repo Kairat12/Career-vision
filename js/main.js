@@ -779,10 +779,8 @@ if(PositionChoice){
 		cityInputs.forEach((el) =>{
 			if(el.checked && el.id){
 				typeorgInput.setAttribute("value", el.parentElement.textContent.trim());
-				let hiddenInput = document.createElement('input');
-				hiddenInput.setAttribute("id", el.id)
-				typeorgInput.parentElement.appendChild(hiddenInput);
-				hiddenInput.style.display = "none"
+				let hiddenInput = typeorgInput.parentElement.querySelector('.hidden-input');
+				hiddenInput.setAttribute("value", el.id )
 			}
 		})
 	})
