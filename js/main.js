@@ -240,7 +240,7 @@ $('.header__kebab').on("click", function() {
 let publishInputDel = document.querySelector('.publush__vacancy__input');
 if (publishInputDel){
 	publishInputDel.addEventListener("click", (e) =>{
-		let target = e.target;
+		let target = e.target; 
 		if (target.classList.contains('publish__input__del')){
 			target.previousElementSibling.value = "";
 		}
@@ -856,17 +856,17 @@ if (addTable){
 }
 
 
-// const aiToptext = document.querySelectorAll('.ai__top__text');
-// if(aiToptext){
-// 	aiToptext.forEach(elem =>{
-// 		elem.addEventListener("click", function(e){
-// 			let target = e.target;
-// 			if(target.classList.contains('input-edit__btn')){
-// 				target.previousElementSibling.removeAttribute("disabled");
-// 			}
-// 		})
-// 	})
-// }
+const aiToptext = document.querySelectorAll('.ai__top__text');
+if(aiToptext){
+	aiToptext.forEach(elem =>{
+		elem.addEventListener("click", function(e){
+			let target = e.target;
+			if(target.classList.contains('input-edit__btn')){
+				target.previousElementSibling.removeAttribute("disabled");
+			}
+		})
+	})
+}
 
 const smoothLinks = document.querySelectorAll('a[href^="#"].link');
 for (let smoothLink of smoothLinks) {
