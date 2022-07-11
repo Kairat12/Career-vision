@@ -5106,6 +5106,10 @@ input::-webkit-inner-spin-button {
 .additional-information__content .js__upload__file__block.hidden{
     display: none;
 }
+.top__block__notice__btns{
+    display: flex;
+    column-gap: 20px;
+}
 /* Organization pages*/
 
 .header__right__aplic .mobile-logout{
