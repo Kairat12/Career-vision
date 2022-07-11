@@ -167,7 +167,7 @@ $('.lang_choice').on("click", function(){
 // 	}
 // });
 
-$('.courses-bottom__list').on("click", function(e) {
+$('.courses-bottom__link').on("click", function(e) {
 	const target = e.target
 	$(target.nextElementSibling).slideToggle();
 	target.classList.toggle('active')
