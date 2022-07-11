@@ -4525,6 +4525,9 @@ input::-webkit-inner-spin-button {
 .tarifs__content{
     height: auto;
 }
+.no-data-js *, .yes-data-js *{
+    pointer-events: none;
+}
 .tarifs__block{
     display: flex;
     flex-direction: column;
@@ -7625,6 +7628,7 @@ body::-webkit-scrollbar-thumb {
     }
     .footer__bottom {
         padding: 20px 20px;
+        padding-bottom: 100px;
     }
     .footer__network {
         flex: 0 1 100%;

@@ -872,6 +872,20 @@ if(aiToptext){
 	})
 }
 
+const JobCheker = document.querySelector('.job-js-cheker');
+if (JobCheker){
+	JobCheker.addEventListener("click", function(e){
+		let DataBlockJS = document.querySelector('.data-block-js')
+		let target = e.target;
+		if(target.classList.contains('no-data-js')){
+			DataBlockJS.style.display = 'none';
+		}else if (target.classList.contains('yes-data-js')){
+			DataBlockJS.style.display = 'flex';
+		}
+	})
+}
+
+
 const smoothLinks = document.querySelectorAll('a[href^="#"].link');
 for (let smoothLink of smoothLinks) {
     smoothLink.addEventListener('click', function (e) {
