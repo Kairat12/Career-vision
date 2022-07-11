@@ -4493,21 +4493,21 @@ input::-webkit-inner-spin-button {
     column-gap: 2%;
     margin-top: 30px;
 }
-.publish__vacancy__btns input{
+.publish__vacancy__btns .view__show__btn,.publish__vacancy__btns .draft__btn,.publish__vacancy__btns .publish__btn{
     flex: 1 1 auto;
     text-align: center;
     color: #fff;
     font-weight: 500;
     font-size: 18px;
 }
-.publish__vacancy__btns input{
+.publish__vacancy__btns .view__show__btn,.publish__vacancy__btns .draft__btn,.publish__vacancy__btns .publish__btn{
     height: 50px;
     background: #FD8A25;
     border-radius: 10px;
     transition: 0.3s linear;
     cursor: pointer;
 }
-.publish__vacancy__btns input:hover{
+.publish__vacancy__btns .publish__btn:hover{
     background: #c96d1d;
 }
 .publish__vacancy__btns .view__show__btn{

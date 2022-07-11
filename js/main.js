@@ -722,7 +722,7 @@ if(countryChoice){
 					let parentsDel = el.closest(".region-popup__block");
 					if (el.dataset.country == elemRadio.dataset.country ){
 						parentsDel.classList.add("show");
-					}
+					}else
 					if(el.dataset.country !== elemRadio.dataset.country){
 						// let parentDel = el.closest('.region-popup__block');
 						parentsDel.classList.remove("show")
@@ -742,6 +742,10 @@ if(cityChoice){
 	cityChoice.addEventListener("click", function(){
 		let cityInputs = cityContent.querySelectorAll('.region-popup__checkbox');
 		cityInputs.forEach((el) =>{
+			let parentsDel = el.closest(".region-popup__block");
+			if (el.dataset.country == cityInput.dataset.country){
+				parentsDel.classList.add("show");
+			}
 			if(el.checked){
 				cityInput.setAttribute("value", el.parentElement.textContent.trim());
 				let hiddenInput = cityInput.parentElement.querySelector('.hidden-input');
